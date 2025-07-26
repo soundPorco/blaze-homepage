@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <title>自作スライダー</title>
+        <style>
+            .slider-container {
+                position: relative;
+                overflow: hidden;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .slider-track {
+                display: flex;
+                transition: transform 0.5s ease;
+            }
+
+            .slider-card {
+                min-width: 300px;
+                margin: 20px;
+                background: #eee;
+                border-radius: 10px;
+                text-align: center;
+                padding: 20px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .slider-card img {
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+
+            .slider-buttons {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .slider-buttons button {
+                padding: 10px 20px;
+                margin: 0 10px;
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="slider-container">
+            <div class="slider-track" id="slider">
+                <div class="slider-card">
+                    <img src="https://via.placeholder.com/100" />
+                    <p>最高のレッスンでした！</p>
+                </div>
+                <div class="slider-card">
+                    <img src="https://via.placeholder.com/100" />
+                    <p>子どもが楽しみにしています！</p>
+                </div>
+                <div class="slider-card">
+                    <img src="https://via.placeholder.com/100" />
+                    <p>丁寧な指導が安心。</p>
+                </div>
+                <div class="slider-card">
+                    <img src="https://via.placeholder.com/100" />
+                    <p>初心者でも安心して参加できました。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-buttons">
+            <button onclick="scrollSlider(-1)">← 前へ</button>
+            <button onclick="scrollSlider(1)">次へ →</button>
+        </div>
+
+        <script>
+            const slider = document.getElementById("slider");
+            let scrollIndex = 0;
+
+            function scrollSlider(direction) {
+                const cardWidth = 340; // カード1枚＋余白
+                scrollIndex += direction;
+                const maxIndex = slider.children.length - 2; // 画面に2枚表示する想定
+
+                // 制限
+                if (scrollIndex < 0) scrollIndex = 0;
+                if (scrollIndex > maxIndex) scrollIndex = maxIndex;
+
+                slider.style.transform = `translateX(-${
+                    cardWidth * scrollIndex
+                }px)`;
+            }
+        </script>
+    </body>
+</html>
