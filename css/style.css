@@ -90,6 +90,14 @@ main {
     max-width: 70vw;
     margin: 0 auto;
 }
+.time-section {
+    max-width: 70vw;
+    margin: 0 auto;
+}
+.tuition-section {
+    max-width: 70vw;
+    margin: 0 auto;
+}
 .question-section {
     max-width: 70vw;
     margin: 0 auto;
@@ -98,6 +106,7 @@ main {
     max-width: 60vw;
     margin: 0 auto;
 }
+
 /* ヘッダーとナビバー */
 .customNavbar {
     background-color: rgb(27.5, 27.5, 27.5);
@@ -133,19 +142,37 @@ main {
     position: fixed;
     bottom: 25px; /* 下から20px */
     right: 25px; /* 右から20px */
-    /* width: 250px; */
-    padding: 16px 12px;
+    padding: 1rem 1rem 1rem 1.2rem;
     font-weight: bold;
     background-color: orange;
     color: white;
-    border: none;
+    border: 1px solid gainsboro;
     border-radius: 50px;
     font-size: 16px;
     cursor: pointer;
     z-index: 1000; /* 最前面に */
+}
+.fixed-button a {
+    color: inherit; /* 親要素の文字色を継承 */
+    text-decoration: none; /* 下線を消す */
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.fixed-button div {
+    text-align: center;
+}
+.fixed-button a h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+.fixed-button a p {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
 }
 
 .person-add {
@@ -299,6 +326,7 @@ main {
 .accordion-box {
     padding: 8px 35px;
     text-align: center;
+    margin-bottom: 30px;
 }
 .accordion-front {
     display: flex;
@@ -322,7 +350,7 @@ main {
     max-height: 1000px;
     width: 90%;
     overflow: visible;
-    padding: 35px 0;
+    padding: 35px 0 0;
     margin: 0 auto;
 }
 .accordion-content p {
@@ -392,6 +420,24 @@ h4.option {
     margin-bottom: 10px;
     font-weight: bold;
 }
+/* 練習時間について */
+.time-section ul {
+    list-style: none;
+    font-weight: bolder;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* 月会費、諸費用について */
+
+.tuition-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.tuition-section ul {
+    list-style: none;
+}
+
 /* よくある質問 */
 .question-title {
     text-align: center;

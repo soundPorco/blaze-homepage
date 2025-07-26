@@ -1,95 +1,128 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8" />
-        <title>自作スライダー</title>
-        <style>
-            .slider-container {
-                position: relative;
-                overflow: hidden;
-                width: 90%;
-                margin: 0 auto;
-            }
+<section id="practice-time" class="my-8 px-4 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">練習時間</h2>
+    <p>平日5日間（月～金）</p>
+    <ul class="list-disc list-inside mb-2">
+        <li>① 18:15〜19:45</li>
+        <li>② 20:00〜21:30</li>
+    </ul>
+    <p class="mb-1">
+        ※クラス①は曜日により19:15〜20:45など変更になる場合がございます。
+    </p>
+    <p>※開始15分前よりコートのご利用が可能です。</p>
+</section>
 
-            .slider-track {
-                display: flex;
-                transition: transform 0.5s ease;
-            }
+<section id="pricing" class="my-8 px-4 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">料金案内（すべて税込）</h2>
 
-            .slider-card {
-                min-width: 300px;
-                margin: 20px;
-                background: #eee;
-                border-radius: 10px;
-                text-align: center;
-                padding: 20px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            }
+    <h3 class="text-xl font-semibold mb-2">月会費（選択制）</h3>
+    <ul class="list-disc list-inside mb-4 space-y-1">
+        <li>① 週1回コース（月4回）………￥5,500</li>
+        <li>② 週2回コース（月8回）………￥9,900</li>
+        <li>③ 週1回＋WEEKEND FREE………￥6,600</li>
+        <li>④ 週2回＋WEEKEND FREE………￥11,000</li>
+    </ul>
+    <p class="mb-4">
+        ※WEEKEND
+        FREEは、土日9:00〜17:00の間、施設を自由にご利用いただけるプランです（利用規定あり）。
+    </p>
 
-            .slider-card img {
-                border-radius: 50%;
-                width: 100px;
-                height: 100px;
-                object-fit: cover;
-                margin-bottom: 10px;
-            }
+    <h3 class="text-xl font-semibold mb-2">その他費用</h3>
+    <ul class="list-disc list-inside space-y-1">
+        <li>入会費……………………………￥5,500</li>
+        <li>年会費……………………………￥5,500</li>
+        <li>スポーツ保険料（年額）………￥1,000</li>
+        <li>決済手数料………………………￥500</li>
+    </ul>
+    <p class="mt-4">
+        ※現在在籍中の会員様におきましては、入会費・今年度の年会費・スポーツ保険料は不要です。
+    </p>
+</section>
+<style>
+    .time-select-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 40px 0;
+        flex-wrap: wrap;
+    }
 
-            .slider-buttons {
-                text-align: center;
-                margin-top: 10px;
-            }
+    .time-box {
+        background-color: #ffe5b4;
+        border: 4px solid #ff8c00;
+        border-radius: 16px;
+        padding: 30px 40px;
+        width: 280px;
+        text-align: center;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-            .slider-buttons button {
-                padding: 10px 20px;
-                margin: 0 10px;
-                font-size: 1rem;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="slider-container">
-            <div class="slider-track" id="slider">
-                <div class="slider-card">
-                    <img src="https://via.placeholder.com/100" />
-                    <p>最高のレッスンでした！</p>
-                </div>
-                <div class="slider-card">
-                    <img src="https://via.placeholder.com/100" />
-                    <p>子どもが楽しみにしています！</p>
-                </div>
-                <div class="slider-card">
-                    <img src="https://via.placeholder.com/100" />
-                    <p>丁寧な指導が安心。</p>
-                </div>
-                <div class="slider-card">
-                    <img src="https://via.placeholder.com/100" />
-                    <p>初心者でも安心して参加できました。</p>
-                </div>
-            </div>
-        </div>
+    .time-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
 
-        <div class="slider-buttons">
-            <button onclick="scrollSlider(-1)">← 前へ</button>
-            <button onclick="scrollSlider(1)">次へ →</button>
-        </div>
+    .time-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #d35400;
+        font-family: "Oswald", sans-serif;
+        margin-bottom: 10px;
+    }
 
-        <script>
-            const slider = document.getElementById("slider");
-            let scrollIndex = 0;
+    .time-range {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #444;
+    }
 
-            function scrollSlider(direction) {
-                const cardWidth = 340; // カード1枚＋余白
-                scrollIndex += direction;
-                const maxIndex = slider.children.length - 2; // 画面に2枚表示する想定
+    .time-heading {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-family: "Oswald", sans-serif;
+        border-left: 6px solid #ff5722;
+        padding-left: 12px;
+    }
+</style>
 
-                // 制限
-                if (scrollIndex < 0) scrollIndex = 0;
-                if (scrollIndex > maxIndex) scrollIndex = maxIndex;
+<section id="practice-time" class="my-8 px-4 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">練習時間</h2>
+    <p>平日5日間（月～金）</p>
+    <ul class="list-disc list-inside mb-2">
+        <li>① 18:15〜19:45</li>
+        <li>② 20:00〜21:30</li>
+    </ul>
+    <p class="mb-1">
+        ※クラス①は曜日により19:15〜20:45など変更になる場合がございます。
+    </p>
+    <p>※開始15分前よりコートのご利用が可能です。</p>
+</section>
 
-                slider.style.transform = `translateX(-${
-                    cardWidth * scrollIndex
-                }px)`;
-            }
-        </script>
-    </body>
-</html>
+<section id="pricing" class="my-8 px-4 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">料金案内（すべて税込）</h2>
+
+    <h3 class="text-xl font-semibold mb-2">月会費（選択制）</h3>
+    <ul class="list-disc list-inside mb-4 space-y-1">
+        <li>① 週1回コース（月4回）………￥5,500</li>
+        <li>② 週2回コース（月8回）………￥9,900</li>
+        <li>③ 週1回＋WEEKEND FREE………￥6,600</li>
+        <li>④ 週2回＋WEEKEND FREE………￥11,000</li>
+    </ul>
+    <p class="mb-4">
+        ※WEEKEND
+        FREEは、土日9:00〜17:00の間、施設を自由にご利用いただけるプランです（利用規定あり）。
+    </p>
+
+    <h3 class="text-xl font-semibold mb-2">その他費用</h3>
+    <ul class="list-disc list-inside space-y-1">
+        <li>入会費……………………………￥5,500</li>
+        <li>年会費……………………………￥5,500</li>
+        <li>スポーツ保険料（年額）………￥1,000</li>
+        <li>決済手数料………………………￥500</li>
+    </ul>
+    <p class="mt-4">
+        ※現在在籍中の会員様におきましては、入会費・今年度の年会費・スポーツ保険料は不要です。
+    </p>
+</section>
