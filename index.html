@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <!-- googleアイコン -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        />
+        <!-- googleFontsの高速化用preconect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- googleFonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dela+Gothic+One&family=Oswald:wght@200..700&family=Sigmar&display=swap"
+            rel="stylesheet"
+        />
+        <!-- swiperのCDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <!-- style.cssの読み込み -->
+        <link rel="stylesheet" href="css/style.css" />
+        <title>BLAZE_BASKETBALL_SCHOOL</title>
+    </head>
+
+    <!-- body_strat -->
+    <body>
+        <header>
+            <!-- ナビバー -->
+            <nav
+                class="navbar customNavbar navbar-expand-md navbar-dark fixed-top border-bottom border-2"
+            >
+                <div class="container-fluid">
+                    <!-- ロゴマーク -->
+                    <a class="navbar-brand" href="#">
+                        <img
+                            src="images/logo.png"
+                            alt="logo"
+                            class="logo ms-4"
+                        />
+                    </a>
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div
+                        class="collapse navbar-collapse Oswald"
+                        id="mainNavbar"
+                    >
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active rounded-pill"
+                                    ><span class="material-symbols-outlined">
+                                        home </span
+                                    >TOP</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="#about"
+                                    class="nav-link active rounded-pill"
+                                    ><span class="material-symbols-outlined">
+                                        article </span
+                                    >ABOUT</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="#map"
+                                    class="nav-link active rounded-pill"
+                                    ><span class="material-symbols-outlined">
+                                        location_on </span
+                                    >MAP</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="#gallery"
+                                    class="nav-link active rounded-pill"
+                                    ><span class="material-symbols-outlined">
+                                        perm_media </span
+                                    >GALLERY</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                    href="#contact"
+                                    class="nav-link active rounded-pill me-4"
+                                    ><span class="material-symbols-outlined">
+                                        mail </span
+                                    >CONTACT</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- 参加するボタン -->
+            <button class="fixed-button shadow">
+                スクールに参加する<span class="material-symbols-outlined">
+                    arrow_right
+                </span>
+            </button>
+            <!-- ナビバー終了 -->
+            <div class="space"></div>
+            <div class="mv">
+                <img
+                    src="https://placehold.co/500x350"
+                    alt="メインビジュアル"
+                />
+            </div>
+            <!-- キャッチコピー -->
+            <!-- <div class="catchCopy">
+                <h1 class="mainCatchCopy">GO BLAZE A TRAIL FOR THE FUTURE</h1>
+            </div>
+            <p class="subCatchCopy">未来を切り拓け</p> -->
+
+            <!-- スライダー全体 -->
+            <div class="swiperBackImg img-fluid">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- 各スライド -->
+                        <div class="swiper-slide">
+                            <img
+                                src="images/demo_swiper.jpg"
+                                alt="キャンペーン1"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="https://placehold.co/500x350"
+                                alt="キャンペーン2"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="https://placehold.co/500x350"
+                                alt="キャンペーン3"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="https://placehold.co/500x350"
+                                alt="キャンペーン4"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="https://placehold.co/500x350"
+                                alt="キャンペーン5"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="https://placehold.co/500x350"
+                                alt="キャンペーン5"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="https://placehold.co/500x350"
+                                alt="キャンペーン5"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="https://placehold.co/500x350"
+                                alt="キャンペーン5"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <!-- ドット（ページネーション） -->
+                <div class="swiper-pagination"></div>
+                <!-- 前後ボタン -->
+                <div class="swiper-button-prev text-dark"></div>
+                <div class="swiper-button-next text-dark"></div>
+            </div>
+        </header>
+
+        <main>
+            <!-- ABOUTゾーン -->
+            <div class="space" id="about"></div>
+            <!-- about us(セールスポイントなど) -->
+            <h2 class="heading-text large">ABOUT US</h2>
+            <p class="sub-heading-text sub-large">活動について</p>
+            <section class="about-section">
+                <div class="contain">
+                    <img
+                        src="images/demo1.jpg"
+                        alt="バスケのイメージ画像"
+                        class="portrait border-s col-8"
+                    />
+                    <div class="text">
+                        <h2>テキスト1</h2>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contain">
+                    <div class="text">
+                        <h2>テキスト2</h2>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                    </div>
+                    <img
+                        src="images/demo2.jpg"
+                        alt="バスケのイメージ画像"
+                        class="portrait border col-8"
+                    />
+                </div>
+                <div class="contain">
+                    <img
+                        src="images/demo3.jpg"
+                        alt="バスケのイメージ画像"
+                        class="portrait border-s col-8"
+                    />
+                    <div class="text">
+                        <h2>テキスト3</h2>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                    </div>
+                </div>
+                <div class="contain">
+                    <div class="text">
+                        <h2>テキスト4</h2>
+                        <p>
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                        </p>
+                    </div>
+                    <img
+                        src="images/demo4.jpg"
+                        alt="バスケのイメージ画像"
+                        class="portrait border col-8"
+                    />
+                </div>
+            </section>
+            <!-- 施設の紹介 -->
+            <div class="space" id=""></div>
+            <h2 class="heading-text large">SKILLIMPROVE LABO</h2>
+            <p class="sub-heading-text sub-large">県内初のスクール専用施設</p>
+            <section class="labo-section">
+                <p class="description-text">
+                    徳島県初となるバスケットボールスクール専用施設として誕生した
+                    SKILIMPROVE LABO は、 BASKETBALL SCHOOL
+                    BLAZEの新たな拠点です。子どもたちが集中して練習し、のびのびと成長できる環境を整えています。
+                </p>
+
+                <div class="labo-container">
+                    <img
+                        src="https://placehold.co/500x400"
+                        alt="ラボの画像"
+                        class="labo-main-img"
+                    />
+
+                    <img
+                        src="https://placehold.co/500x400"
+                        alt="ラボの画像"
+                        class="labo-item1"
+                    />
+
+                    <img
+                        src="https://placehold.co/500x400"
+                        alt="ラボの画像"
+                        class="labo-item2"
+                    />
+                    <div class="labo-text shadow">
+                        <h3 class="heading-text medium">OUTLINE</h3>
+                        <p class="sub-heading-text sub-medium">施設概要</p>
+                        <ul>
+                            <li>徳島市北沖洲2丁目164</li>
+                            <li>コート面積200㎡</li>
+                            <li>高さ調整可能なバスケットリング3基</li>
+                            <li>シューティング専用マシン</li>
+                            <li>トレーニング用具完備</li>
+                            <li>保護者見学スペース・冷風機</li>
+                            <li>仮設水洗トイレ</li>
+                            <li>専用駐車場10台分</li>
+                        </ul>
+                    </div>
+                    <!-- googleMapゾーン -->
+                    <div class="map shadow">
+                        <h2 class="map-title Oswald">MAP</h2>
+                        <p class="map-description">
+                            <strong>SKILLIMPROVE LABO</strong
+                            >へのアクセスマップです。<br />
+                            JR浜松町駅から徒歩15分、都営大江戸線赤羽橋駅から徒歩5分の好立地です。<br />
+                            お越しの際は公共交通機関をご利用ください。
+                        </p>
+                        <iframe
+                            class="map-frame"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7475353291647!2d139.74286552607427!3d35.65859132259456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bbd9009ec09%3A0x481a93f0d2a409dd!2sTokyo%20Tower!5e0!3m2!1sen!2sjp!4v1748081972144!5m2!1sen!2sjp"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+
+                <!-- googleMapゾーン終了 -->
+            </section>
+
+            <!-- クラスの概要について -->
+            <div class="space" id="class"></div>
+            <h2 class="heading-text large">CLASS INTRODUCTION</h2>
+            <p class="sub-heading-text sub-large">
+                成長を加速させる、クラスラインナップ
+            </p>
+            <section class="class-section">
+                <p class="description-text">
+                    「もっと上手くなりたい」「バスケの楽しさを知りたい」「基礎をしっかり学びたい」<br />
+                    <strong>BLAZE BASKETBALL SCHOOL</strong>
+                    では、そんなすべての想いに応えるクラスをご用意しています。<br /><br />
+                    クラスは、目的やスキルに応じて段階的に設計されており、初心者が安心してスタートできるベーシッククラスから、実戦力を磨くアドバンスドクラスまで幅広く対応しています。
+                    指導は丁寧にサポートするため、初めてバスケットボールに触れるお子様も、ステップアップを目指す経験者も、ここでなら着実な成長を実感できるはずです。<br /><br />
+                    受講者の経験、目的に応じて複数のコースをご用意しています。
+                    初心者から上級者まで、安心して学べる充実したカリキュラムで、確かな成長をサポートします。
+                    それぞれのニーズに合った最適なコースをぜひご覧ください。
+                    さあ、自分にぴったりのクラスを見つけて、一緒に成長への一歩を踏み出しましょう！
+                </p>
+                <h3 class="heading-text medium">CLASS TYPES</h3>
+                <p class="sub-heading-text sub-medium">各クラスの紹介</p>
+
+                <!-- 新しいクラス紹介（アコーディオンタイプ） -->
+                <div class="accordion-container">
+                    <div class="accordion-box">
+                        <div class="accordion-front">
+                            <img
+                                src="https://placehold.co/500x400"
+                                alt="画像"
+                            />
+                            <div>
+                                <div class="accordion-header">
+                                    <h3 class="accordion-title">BASIC CLASS</h3>
+                                    <p>バスケの基礎を楽しく学ぶ入門クラス</p>
+                                </div>
+                                <p>
+                                    身体の使い方、ボールハンドリング、正しいシュートフォームなど、
+                                    バスケットボールの基本技術を楽しく学べる入門クラスです。<br />
+                                    ファンダメンタル（基礎）の習得を通じて、スキルの土台をしっかり築いていきます。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="recomend">
+                                <h3 class="recomend-title">
+                                    こんな人におすすめ
+                                </h3>
+                                <ul>
+                                    <li>● バスケ初心者（U12〜U15）</li>
+                                    <li>● 基礎から丁寧に学びたい方</li>
+                                    <li>
+                                        ●
+                                        チーム練習だけでは補えないスキルを身につけたい方
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>
+                                バスケットボールの楽しさは、確かな基礎から始まります！
+                            </p>
+                            <p>
+                                このBASIC
+                                CLASSは、バスケットボールを始めたばかりのお子様や、もう一度基礎からしっかりと学び直したいお子様に最適なクラスです。
+                                スキルの土台となるファンダメンタル、つまり「身体操作」「ボールの扱い」「シュート」といったバスケットボールの根幹を、時間をかけて丁寧に構築していきます
+                                。<br />
+                                一人ひとりのレベルに合わせて指導を行うことで、正しいフォームと動きを習得し、バスケットボールの楽しさを深く実感できるでしょう。このクラスで身につけた確かな基礎は、お子様のバスケットボール人生を豊かにするかけがえのない財産となります。
+                            </p>
+                        </div>
+                        <button class="accordion-toggle">詳細を見る</button>
+                    </div>
+                    <div class="accordion-box">
+                        <div class="accordion-front">
+                            <img
+                                src="https://placehold.co/500x400"
+                                alt="画像"
+                            />
+                            <div>
+                                <div class="accordion-header">
+                                    <h3 class="accordion-title">
+                                        ADVANCED CLASS
+                                    </h3>
+                                    <p>
+                                        判断力と実戦的スキルを鍛える競技特化型クラス
+                                    </p>
+                                </div>
+                                <p>
+                                    実戦を想定した状況判断やプレー選択を含めた、より高度なスキルの習得を目指すクラスです。<br />
+                                    実践的なトレーニングを通じて、競技力の向上に特化した内容を提供します。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="recomend">
+                                <h3 class="recomend-title">
+                                    こんな人におすすめ
+                                </h3>
+                                <ul>
+                                    <li>● U15 または U12 の上級者</li>
+                                    <li>
+                                        ●
+                                        実戦で通用する判断力と応用スキルを高めたい選手
+                                    </li>
+                                    <li>
+                                        ●
+                                        より競技性の高い環境でステップアップしたい方
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>
+                                次のレベルへ！実践で活きるスキルを習得し、試合で輝こう！
+                            </p>
+                            <p>
+                                ADVANCED
+                                CLASSは、バスケットボールの経験があり、さらに競技力を向上させたいと願うお子様のための、より実践的で競技に特化したクラスです
+                                。<br />
+                                このクラスでは、単なる技術の習得に留まらず、「判断を伴う実戦的なスキル」の養成に力を入れています
+                                。試合中に刻々と変化する状況を正確に判断し、適切なプレーを選択する能力、そしてそれを実行する高度なスキルを磨きます。より複雑な戦術やチームプレーにも挑戦し、個々の能力をチームの中で最大限に発揮できるよう指導します。<br />
+                                将来、大会での活躍を目指すお子様にとって、このクラスはまさに飛躍の場となるでしょう。
+                            </p>
+                        </div>
+
+                        <button class="accordion-toggle">詳細を見る</button>
+                    </div>
+                    <!-- オプションについて -->
+
+                    <div class="accordion-box">
+                        <div class="accordion-front">
+                            <img src="images/labo.png" alt="画像" />
+                            <div>
+                                <div class="accordion-header">
+                                    <h4 class="option">OPTION</h4>
+                                    <h3 class="accordion-title option">
+                                        WEEKEND FREE
+                                    </h3>
+                                    <p>スキルを磨く環境をあなたへ</p>
+                                </div>
+                                <p>
+                                    土日9:00〜17:00の間、施設を自由にご利用いただける週末限定プランです（利用規定あり）<br />
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="recomend">
+                                <h3 class="recomend-title">
+                                    こんな人におすすめ
+                                </h3>
+                                <ul>
+                                    <li>
+                                        ●
+                                        自分のペースで集中してスキルアップに取り組みたい方
+                                    </li>
+                                    <li>
+                                        ●
+                                        クラスで学んだことを復習し、より深く定着させたい方
+                                    </li>
+                                    <li>
+                                        ● シューティングマシンを活用したい方
+                                    </li>
+                                    <li>● バスケットボールへの情熱が強い方</li>
+                                </ul>
+                            </div>
+                            <p>
+                                週末もバスケ漬け！自主練でライバルに差をつけよう！
+                            </p>
+                            <p>
+                                BASKETBALL SCHOOL
+                                BLAZEでは、通常のクラス練習だけでは物足りない、もっとバスケットボールに触れる時間を増やしたいという熱心なお子様のために、
+                                <strong>WEEKEND FREE</strong>
+                                という特別なオプションをご用意しています
+                                。このオプションは、土曜日と日曜日の午前9時から午後5時までの間、当施設<strong>
+                                    SKILIMPROVE LABO </strong
+                                >を自由に利用できる画期的なプランです 。<br />
+                                クラスで学んだことを復習したり、苦手なプレーを克服するために反復練習をしたり、シューティングマシンを使ってシュート力を徹底的に鍛えたりと、使い方は無限大です
+                                。自主練習の時間を最大限に活用することで、飛躍的なスキルアップが期待できます。仲間と一緒に練習することもでき、バスケットボールへの情熱をさらに燃やすことができるでしょう。
+                            </p>
+                            <p>
+                                思いっきりプレーして、自分のペースでスキルアップを目指しましょう！<br /><br />
+                                ※ご利用には事前登録とルールの確認が必要です。
+                            </p>
+                        </div>
+
+                        <button class="accordion-toggle">詳細を見る</button>
+                    </div>
+                </div>
+                <!-- 今後開設予定のクラスについて -->
+                <div class="upcoming">
+                    <h4>今後開設予定のクラス</h4>
+                    <p>
+                        ●
+                        <strong>SHOOTING CLASS：</strong>
+                        シュート力向上に特化した専門クラス<br />
+                        ●
+                        <strong>未就学児向けクラス：</strong>
+                        遊びを通じて運動の楽しさを育むクラス
+                    </p>
+                    <p class="note">
+                        ※ご希望の方は、お問い合わせ時に備考欄へご記入ください。
+                    </p>
+                </div>
+            </section>
+            <!-- クラスの概要終了 -->
+            <!-- ABOUTゾーン終了 -->
+
+            <!-- よくある質問 -->
+            <div class="space"></div>
+            <h2 class="heading-text large">QUESTIONS & VOICES</h2>
+            <p class="sub-heading-text sub-large">よくある質問とみんなの声</p>
+            <section class="question-section">
+                <h3 class="heading-text medium">QUESTIONS</h3>
+                <p class="sub-heading-text sub-medium">よくある質問と回答</p>
+                <div class="questions">
+                    <details>
+                        <summary>Q1. 申し込み方法を教えてください</summary>
+                        <p>
+                            Webサイトのお申し込みフォームから必要事項を入力して送信してください。確認後、担当者よりご連絡いたします。
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Q2. 料金はいつ支払えばいいですか？</summary>
+                        <p>
+                            お申し込み後、メールにてご案内するお支払い方法に従って、期日までにお支払いをお願いいたします。
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Q3. キャンセルは可能ですか？</summary>
+                        <p>
+                            サービス提供の◯日前までであればキャンセル可能です。それ以降はキャンセル料が発生します。
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Q4. 支払い方法には何がありますか？</summary>
+                        <p>
+                            クレジットカード、銀行振込、PayPayに対応しています。
+                        </p>
+                    </details>
+                </div>
+            </section>
+            <seciton class="voice-section">
+                <div class="voice-title" style="margin-left: 60px">
+                    <h3 class="heading-text medium">VOICES</h3>
+                    <p class="sub-heading-text sub-medium">スクール生徒の声</p>
+                </div>
+                <div class="voice-container">
+                    <div class="voice-card">
+                        <div class="voice-header">
+                            <img
+                                src="images/demo1.jpg"
+                                class="voice-img"
+                                alt="User 1"
+                            />
+                            <div class="voice-info">
+                                <p>K.T（女性・12歳）</p>
+                                <p>BASIC・週2回・保護者</p>
+                                <p>通学歴：6ヶ月</p>
+                            </div>
+                        </div>
+                        <p class="voice-text">
+                            子どもが運動に対して少し苦手意識を持っていたのですが、BLAZEの先生方がとても丁寧に、そして明るく指導してくださるおかげで、今ではバスケのある日を毎週楽しみにしています。<br />
+                            スキルだけでなく、あいさつや協調性、チャレンジする気持ちも自然と身についていて、親としても大変うれしく思っています。家でもドリブルの練習をするほどやる気を見せるようになりました。
+                        </p>
+                    </div>
+
+                    <div class="voice-card">
+                        <div class="voice-header">
+                            <img
+                                src="images/demo2.jpg"
+                                class="voice-img"
+                                alt="User 2"
+                            />
+                            <div class="voice-info">
+                                <p class="voice-name">Y.M（男性・14歳）</p>
+                                <p class="voice-details">
+                                    ADVANCED・週1回・本人
+                                </p>
+                                <p class="voice-period">通学歴：1年3ヶ月</p>
+                            </div>
+                        </div>
+                        <p class="voice-text">
+                            部活の練習だけでは物足りなさを感じていたとき、BLAZEの存在を知って通い始めました。<br />
+                            自分のポジションに合った動きや判断力をしっかり教えてもらえるので、試合でもすぐ活かせるようになり、チームの中心選手として活躍できるようになりました。<br />
+                            特にトレーニングや細かいステップ指導がとても実践的で、レベルアップを実感しています。
+                        </p>
+                    </div>
+                    <div class="voice-card">
+                        <div class="voice-header">
+                            <img
+                                src="images/demo3.jpg"
+                                class="voice-img"
+                                alt="User 3"
+                            />
+                            <div class="voice-info">
+                                <p class="voice-name">A.S（女性・10歳）</p>
+                                <p class="voice-details">
+                                    ADVANCED・週1回・保護者
+                                </p>
+                                <p class="voice-period">通学歴：3ヶ月</p>
+                            </div>
+                        </div>
+                        <p class="voice-text">
+                            娘はバスケ未経験で運動も苦手意識がありましたが、BLAZEでは体験からとても丁寧に対応していただき、安心して通うことができています。<br />
+                            先生方が一人ひとりに目を配ってくださるので、少しずつ自信をつけ、今では練習の日を心待ちにしています。<br />
+                            バスケの技術だけでなく、礼儀やコミュニケーション力も自然と身についてきていて、親としても通わせてよかったと感じています。
+                        </p>
+                    </div>
+
+                    <div class="voice-card">
+                        <div class="voice-header">
+                            <img
+                                src="images/demo4.jpg"
+                                class="voice-img"
+                                alt="User 4"
+                            />
+                            <div class="voice-info">
+                                <p>S.R（男性・11歳）</p>
+                                <p>BASIC・週2回・本人</p>
+                                <p>通学歴：8ヶ月</p>
+                            </div>
+                        </div>
+                        <p class="voice-text">
+                            チームメイトがみんな頑張っているから、自分も負けたくない！という気持ちで毎回練習に励んでいます。<br />
+                            試合形式の練習では緊張感があって、本番と同じような気持ちで取り組めます。<br />
+                            先生たちが明るく、だけど本気で指導してくれるので、自然と集中力も高まります。目標は次の大会でベストプレーヤー賞を取ることです！
+                        </p>
+                    </div>
+                    <div class="voice-card">
+                        <div class="voice-header">
+                            <img
+                                src="https://placehold.co/500x400"
+                                class="voice-img"
+                                alt="User 5"
+                            />
+                            <div class="voice-info">
+                                <p>N.K（男性・9歳）</p>
+                                <p>STARTER・週1回・保護者</p>
+                                <p>通学歴：5ヶ月</p>
+                            </div>
+                        </div>
+                        <p class="voice-text">
+                            BLAZEに通い始めてから、学校とは違うお友達や年齢の違う子とも関われるようになり、息子の世界が広がったと感じます。<br />
+                            スポーツを通じて自信がつき、家での様子も明るくなりました。<br />
+                            保護者の見学もしやすく、練習の雰囲気もとても安心感があります。将来的には上のクラスにもチャレンジしてほしいと思っています。
+                        </p>
+                    </div>
+                    <div class="voice-card">
+                        <div class="voice-header">
+                            <img
+                                src="https://placehold.co/500x400"
+                                class="voice-img"
+                                alt="User 6"
+                            />
+                            <div class="voice-info">
+                                <p>R.Y（女性・13歳）</p>
+                                <p>ADVANCE・週2回・本人</p>
+                                <p>通学歴：2年</p>
+                            </div>
+                        </div>
+                        <p class="voice-text">
+                            最初はBASICから始め、今はADVANCEクラスに所属しています。最初からずっと教えてくださっているコーチの存在はとても大きく、信頼して練習に取り組めています。<br />
+                            細かいフットワークやゲーム中の判断力など、試合で実際に使えるスキルをしっかり教えてくれるので、学校の大会でも結果が出せました。<br />
+                            今後はさらに上を目指して、自分のプレーに磨きをかけていきたいです。
+                        </p>
+                    </div>
+                </div>
+            </seciton>
+
+            <!-- ギャラリーゾーン -->
+            <div class="space" id="gallery"></div>
+            <h2 class="heading-text large">PHOTO GALLERY</h2>
+            <p class="sub-heading-text sub-large">練習風景</p>
+            <section class="gallery">
+                <div class="container">
+                    <div class="row g-3">
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="placehold"
+                            class="col-12 col-lg-4"
+                        />
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="placehold"
+                            class="col-12 col-lg-4"
+                        />
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="placehold"
+                            class="col-12 col-lg-4"
+                        />
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="placehold"
+                            class="col-6 col-lg-4"
+                        />
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="placehold"
+                            class="col-6 col-lg-4"
+                        />
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="placehold"
+                            class="col-6 col-lg-4"
+                        />
+                    </div>
+                </div>
+                <button class="more mt-5 fs-2 fw-bold rounded-pill">
+                    <a
+                        href="gallery.html"
+                        target="_self"
+                        rel="noopener noreferrer"
+                    >
+                        more<span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span></a
+                    >
+                </button>
+            </section>
+            <!-- ギャラリーゾーン終了 -->
+            <div class="space"></div>
+
+            <!-- 問い合わせ -->
+            <!-- <div class="lastImg">
+                <div class="spaceContent"></div>
+                <div class="spaceS" id="contact"></div>
+               
+                <section class="contact text-center">
+                    <h3 class="headWord m-5 text-light">GET IN TOUCH</h3>
+                    <div class="info">
+                        <h3 class="d-inline">Instagram :</h3>
+                        <a
+                            href="https://www.instagram.com/blaze_baskeschool?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >BLAZE.Instagram</a
+                        >
+                    </div>
+                    <br />
+                    <div class="info">
+                        <h3 class="d-inline">Email :</h3>
+                        <a
+                            href="mailto:bbs@gmail.com?subject=お問い合わせ&body=こちらに内容を入力してください。"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >bbs@gmail.com(仮)</a
+                        >
+                    </div>
+                    <br />
+                    <div class="info">
+                        <h3 class="d-inline">number :</h3>
+                        <a
+                            href="tel=08000000000"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >080-0000-0000</a
+                        >
+                    </div>
+                </section>
+            </div> -->
+            <!-- 問い合わせ終了 -->
+        </main>
+        <!-- フッター画面 -->
+        <footer class="bg-danger pt-5 pb-3">
+            <div class="container">
+                <div class="row border-top border-bottom border-light py-5">
+                    <div
+                        class="col-sm-6 text-center text-md-start mb-4 mb-md-0"
+                    >
+                        <img
+                            src="images/redLogo.png"
+                            alt="logo"
+                            class="rounded-circle mb-4 mb-sm-5"
+                        />
+                        <div class="address fw-bold">
+                            <p>〒XXX-XXXX</p>
+                            <p>徳島県徳島市XXXXXX ABCマンションX階XXX号室</p>
+                            <p>TEL XXX-XXXX-XXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="menu col-sm-6">
+                        <div class="row text-center text-md-start">
+                            <div class="col-6 col-sm-3 mb-1 mb-sm-3">
+                                <h5 class="fw-bold"><a href="#top">TOP</a></h5>
+                            </div>
+                            <div class="col-6 col-sm-3 mb-1 mb-sm-3">
+                                <h5 class="fw-bold">
+                                    <a href="#about">ABOUT</a>
+                                </h5>
+                                <ul class="list-unstyled small">
+                                    <li>xxxxxxxxxxx</li>
+                                    <li>xxxxxxxxxxx</li>
+                                    <li>xxxxxxxxxxx</li>
+                                    <li>xxxxxxxxxxx</li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-sm-3 mb-1 mb-sm-3">
+                                <h5 class="fw-bold"><a href="#map">MAP</a></h5>
+                            </div>
+                            <div class="col-6 col-sm-3 mb-1 mb-sm-3">
+                                <h5 class="fw-bold">
+                                    <a href="#gallery">GALLERY</a>
+                                </h5>
+                                <ul class="list-unstyled small">
+                                    <li>photogallery</li>
+                                    <li>xxxxxxxxxxx</li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-sm-3 mb-1 mb-sm-3">
+                                <h5 class="fw-bold">
+                                    <a href="#contact">CONTACT</a>
+                                </h5>
+                                <ul class="list-unstyled small">
+                                    <li>xxxxxxxxxxx</li>
+                                    <li>xxxxxxxxxxx</li>
+                                    <li>xxxxxxxxxxx</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center pt-3 pt-sm-4 small">
+                    &copy; 2025 BLAZE_BASKETBALL_SCHOOL. All rights reserved.
+                    Images from
+                    <a
+                        href="https://unsplash.com"
+                        class="text-white text-decoration-underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Unsplash</a
+                    >.
+                </div>
+            </div>
+        </footer>
+        <!-- footer終了 -->
+
+        <!-- swiperー -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- bootstrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            ...
+        ></script>
+        <script src="main.js"></script>
+    </body>
+</html>
