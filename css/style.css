@@ -15,7 +15,7 @@ button {
     min-height: 44px;
 }
 button:hover {
-    filter: brightness(110%);
+    filter: brightness(120%);
     transition: 0.3s;
 }
 /* aタグで飛ぶ際の位置調整用 */
@@ -594,18 +594,22 @@ footer a {
 }
 
 /* メディアクエリ：スマホ対応 */
-@media (max-width: 1190px) {
-    .about {
-        width: 95%;
-    }
+/* レスポンシブ対応 */
+
+/* スマホ用 */
+@media (max-width: 767px) {
 }
+
+/* タブレット用 */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
 @media (max-width: 1060px) {
     /* about用 */
     .contain {
         flex-direction: column;
         text-align: center;
         padding: 5% 3%;
-        flex-direction: column;
     }
 
     .portrait {
