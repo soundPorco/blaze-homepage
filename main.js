@@ -22,15 +22,6 @@ const swiper = new Swiper(".swiper", {
     },
 });
 
-// クラス紹介のカードをひっくり返すJS
-const cards = document.querySelectorAll(".class-card");
-
-cards.forEach((card) => {
-    card.addEventListener("click", () => {
-        card.classList.toggle("flipped");
-    });
-});
-
 // クラス紹介アコーディオンタイプの実装コード
 document.querySelectorAll(".accordion-box").forEach((box) => {
     const accordionBtn = box.querySelector(".accordion-toggle");
