@@ -12,7 +12,7 @@ body {
 }
 
 button {
-    min-height: 44px;
+    min-height: 3rem;
 }
 button:hover {
     filter: brightness(120%);
@@ -31,28 +31,28 @@ button:hover {
 }
 .heading-text {
     font-weight: bold;
-    border-left: 6px solid red;
+    border-left: 0.5rem solid red;
     padding-left: 0.5em;
     font-family: "Oswald";
 }
 .sub-heading-text {
-    margin-left: 16px;
+    margin-left: 1rem;
     color: red;
     letter-spacing: 0.5rem;
 }
 .large {
-    font-size: 48px;
+    font-size: 3rem;
 }
 .sub-large {
-    font-size: 16px;
+    font-size: 1rem;
 }
 /* h3タグ */
 .medium {
-    font-size: 36px;
+    font-size: 2rem;
     border-left: royalblue 6px solid;
 }
 .sub-medium {
-    font-size: 16px;
+    font-size: 0.9rem;
     color: royalblue;
 }
 /* h4タグ */
@@ -64,12 +64,12 @@ button:hover {
     font-size: 12px;
 } */
 .description-text {
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 2;
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
     text-align: left;
-    padding: 30px 20px 40px;
+    padding: 2rem 0;
 }
 
 /* 各セクションのwidth調整 */
@@ -78,40 +78,22 @@ main {
     max-width: 80vw;
     margin: 0 auto;
 }
-.about-section {
-    margin: 0 auto;
-    max-width: 70vw;
-}
-.labo-section {
-    max-width: 70vw;
-    margin: 0 auto;
-}
-.class-section {
-    max-width: 70vw;
-    margin: 0 auto;
-}
-.time-section {
-    max-width: 70vw;
-    margin: 0 auto;
-}
-.tuition-section {
-    width: 70vw;
-    max-width: 100%;
-    margin: 0 auto;
-}
-.question-section {
-    max-width: 70vw;
-    margin: 0 auto;
-}
+.about-section,
+.labo-section,
+.class-section,
+.time-section,
+.tuition-section,
+.question-section,
 .voice-section {
-    max-width: 60vw;
     margin: 0 auto;
+    max-width: 70vw;
 }
 
 /* ヘッダーとナビバー */
 .customNavbar {
     background-color: rgb(27.5, 27.5, 27.5);
     padding: 0.5rem;
+    height: 5rem;
 }
 
 .nav-link {
@@ -125,12 +107,12 @@ main {
 .nav-link:hover {
     background-color: #fff;
     color: #111 !important;
-    border-radius: 50px;
+    border-radius: 3rem;
     border: 2px solid #fff;
-    transform: scale(1.05);
 }
 .nav-item a {
     display: flex;
+    align-items: center;
 }
 
 /* ロゴ */
@@ -141,15 +123,14 @@ main {
 /* 参加ボタン */
 .fixed-button {
     position: fixed;
-    bottom: 25px; /* 下から20px */
-    right: 25px; /* 右から20px */
+    bottom: 1.5rem; /* 下から20px */
+    right: 1.5rem; /* 右から20px */
     padding: 1rem 1rem 1rem 1.2rem;
     font-weight: bold;
     background-color: orange;
     color: white;
     border: none;
-    border-radius: 50px;
-    font-size: 16px;
+    border-radius: 3rem;
     cursor: pointer;
     z-index: 1000; /* 最前面に */
 }
@@ -177,9 +158,6 @@ main {
     padding: 0;
 }
 
-.person-add {
-    font-size: 40px;
-}
 /* メインビジュアル */
 .mv {
     height: 70vh;
@@ -222,7 +200,7 @@ main {
     position: relative;
     margin-bottom: 0;
     padding: 0;
-    margin: 30px 0;
+    margin: 1.5rem 0;
 }
 .swiper {
     width: 90vw;
@@ -232,35 +210,35 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 /* Aboutセクション */
 
-.about-section .contain {
+.about-container {
     display: flex;
     flex-direction: row;
     align-items: center; /* 縦軸の中央揃え */
+    margin-bottom: 3rem;
 }
-.portrait {
-    width: 700px;
-    max-height: 600px;
+.about-portrait {
+    width: 600px;
+    max-height: 500px;
     object-fit: cover;
-    margin: 40px 0;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 .about-section .text {
     color: #fff;
-    margin: 30px;
-    padding: 25px;
+    margin: 0.5rem 1.5rem;
+    padding: 2rem;
     background-color: rgba(128, 128, 128);
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 .about-section h2 {
-    font-size: 80px;
+    font-size: 3rem;
 }
 .about-section p {
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 /* 施設紹介ページ */
@@ -269,14 +247,14 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 200px);
-    gap: 20px;
+    gap: 1.5rem;
 }
 .labo-container img {
     object-fit: cover;
     height: 100%;
     width: 100%;
     border: none;
-    border-radius: 15px;
+    border-radius: 1rem;
 }
 .labo-main-img {
     grid-column: 1/3;
@@ -294,22 +272,20 @@ main {
     grid-column: 3/5;
     grid-row: 2/4;
     border: 0;
-    border-radius: 16px;
-    padding: 36px;
+    border-radius: 1rem;
+    padding: 2rem;
 }
 .labo-text ul {
-    font-size: 18px;
-}
-.labo-text li {
-    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
 }
 /* マップのやつ */
 .map {
     grid-column: 1/5;
     grid-row: 4/7;
     border: 0;
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -318,7 +294,7 @@ main {
     height: 80%;
     width: 80%;
     border: 0;
-    border-radius: 8px;
+    border-radius: 1rem;
 }
 
 /* クラス紹介 */
@@ -326,15 +302,16 @@ main {
 /* アコーディオンタイプのcss */
 
 .accordion-box {
-    padding: 8px 35px;
+    max-width: 90%;
     text-align: center;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 .accordion-front {
     display: flex;
     align-items: center;
     text-align: left;
-    gap: 20px;
+    gap: 1.5rem;
 }
 
 .accordion-box img {
@@ -342,7 +319,7 @@ main {
     height: 220px;
     width: 350px;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 1rem;
 }
 .accordion-content {
     max-height: 0;
@@ -352,7 +329,6 @@ main {
     max-height: 1000px;
     width: 90%;
     overflow: visible;
-    padding: 35px 0 0;
     margin: 0 auto;
 }
 .accordion-content p {
@@ -360,7 +336,7 @@ main {
     line-height: 1.7;
 }
 .accordion-title {
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: bolder;
     font-family: "Oswald";
     margin: 0;
@@ -368,10 +344,10 @@ main {
 }
 .accordion-title.option {
     color: royalblue;
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 h4.option {
-    font-size: 25px;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: "Oswald";
     margin: 0;
@@ -385,16 +361,17 @@ h4.option {
     background-color: royalblue;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
 }
+/* こんな人におすすめ */
 .recomend {
-    background-color: rgb(232, 232, 232);
-    border-radius: 16px;
+    background-color: gainsboro;
+    border-radius: 1rem;
     border: none;
     width: 600px;
-    margin: 30px auto;
-    padding: 15px;
+    margin: 2rem auto;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -402,24 +379,24 @@ h4.option {
 .recomend-title {
     font-size: 1.3rem;
     font-weight: bold;
-    margin: 8px 0 16px;
+    margin: 0.5rem 0 1rem;
 }
 .recomend ul {
     list-style: none;
     text-align: left;
 }
 .recomend li {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
 }
 
 /* 今後開設予定のクラスについて */
 .upcoming {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 5rem;
 }
 .upcoming h4 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-weight: bold;
 }
 /* 練習時間について */
@@ -435,7 +412,7 @@ h4.option {
     line-height: 2;
     width: 85%;
     margin: 0 auto;
-    padding: 10px 20px 40px;
+    padding: 1rem 1.5rem 2.5rem;
 }
 .tuition-title {
     font-weight: bold;
@@ -450,7 +427,7 @@ h4.option {
 .question-title {
     text-align: center;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 .questions {
     font-family: sans-serif;
@@ -458,18 +435,17 @@ h4.option {
 }
 .questions details {
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 0.5rem;
     padding: 1rem;
     /* 質問ごとの間隔 */
     margin-bottom: 1rem;
     background-color: whitesmoke;
-    transition: 0.3s ease;
 }
 .questions summary {
-    height: 40px;
+    height: 2.5rem;
     width: 100%;
     font-weight: bold;
-    padding-top: 10px;
+    padding-top: 0.7rem;
 }
 .questions p {
     padding-top: 1.5rem;
@@ -479,16 +455,16 @@ h4.option {
 .voice-container {
     display: flex;
     overflow-x: auto;
-    gap: 25px;
-    padding: 0 40px;
+    gap: 1.5rem;
+    padding: 0 2.5rem;
 }
 .voice-card {
     background-color: #ccc;
     width: 450px;
     height: 430px;
-    border-radius: 16px;
+    border-radius: 1rem;
     text-align: left;
-    padding: 30px 40px;
+    padding: 2rem 2.5rem;
     flex-shrink: 0;
 }
 .voice-header {
@@ -499,26 +475,26 @@ h4.option {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 1.2rem;
 }
 .voice-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 20px;
+    margin: 1.2rem;
     font-weight: bold;
     line-height: 0.3;
 }
 .voice-text {
     /* text-align: left; */
     line-height: 1.8;
-    padding: 0 10px;
+    padding: 0 0.8rem;
 }
 
 /* ギャラリー */
 .gallery img {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); */
     /* hover時に滑らかな動きになる↓*/
     transition: transform 0.3s ease;
 }
@@ -596,57 +572,63 @@ footer a {
 /* メディアクエリ：スマホ対応 */
 /* レスポンシブ対応 */
 
+/* タブレット用 */
+@media (max-width: 991px) {
+    main {
+        max-width: 90vw;
+    }
+    .about-section,
+    .labo-section,
+    .class-section,
+    .time-section,
+    .tuition-section,
+    .question-section,
+    .voice-section {
+        margin: 0 auto;
+        max-width: 85vw;
+    }
+    /* aboutセクションについて */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-portrait {
+        order: 2;
+        width: 500px;
+        max-height: 360px;
+    }
+    .about .text {
+        order: 1;
+        padding: 1rem;
+        margin: 0 1rem;
+    }
+    /* ラボ紹介セクションについて */
+    .labo-text ul {
+        line-height: 1.5rem;
+    }
+    /* クラス紹介セクションについて */
+    .accordion-box {
+        max-width: 100%;
+    }
+    .accordion-box img {
+        height: 180px;
+        width: 265px;
+    }
+    .accordion-title {
+        font-size: 2rem;
+    }
+    .accordion-title.option {
+        font-size: 1.8rem;
+    }
+    h4.option {
+        font-size: 1.2rem;
+    }
+}
+
 /* スマホ用 */
 @media (max-width: 767px) {
 }
 
-/* タブレット用 */
-@media (min-width: 768px) and (max-width: 991px) {
-}
-
-@media (max-width: 1060px) {
-    /* about用 */
-    .contain {
-        flex-direction: column;
-        text-align: center;
-        padding: 5% 3%;
-    }
-
-    .portrait {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        max-height: 500px;
-        order: 2;
-    }
-    .about img {
-        margin: 0;
-    }
-
-    .about .text {
-        width: 90%;
-        margin: 10px 10px;
-        padding: 20px;
-        order: 1;
-    }
-
-    .about h2 {
-        font-size: 35px;
-    }
-
-    .about p {
-        font-size: 16px;
-    }
-
-    /* contact用 */
-    .contact {
-        padding: 8px;
-        margin: 80px auto 30px auto;
-    }
-    .lastImg {
-        height: 700px;
-    }
-}
 @media (max-width: 992px) {
     /* top用 */
     .swiperBackImg {
@@ -654,11 +636,7 @@ footer a {
         width: 100%;
     }
 }
-@media (max-width: 750px) {
-    .portrait {
-        max-height: 350px;
-    }
-}
+
 @media (max-width: 550px) {
     /* navbar用 */
     .logo {
@@ -672,16 +650,6 @@ footer a {
     .swiper {
         width: 100vw;
         height: 250px;
-    }
-    .portrait {
-        max-height: 220px;
-    }
-    .about h2 {
-        font-size: 30px;
-    }
-
-    .about p {
-        font-size: 12px;
     }
     /* footer用 */
     .address p {
