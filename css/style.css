@@ -658,6 +658,9 @@ footer a {
 
 /* スマホ用 */
 @media (max-width: 767px) {
+    html {
+        font-size: 62.5%;
+    }
     main {
         max-width: 95vw;
     }
@@ -666,17 +669,18 @@ footer a {
     .class-section,
     .time-section,
     .tuition-section,
-    .question-section,
-    .voice-section {
+    .question-section {
         margin: 0 auto;
         max-width: 90vw;
     }
-    .customNavbar {
-        height: 4rem;
+    .voice-section {
+        margin: 0 auto;
+        max-width: 100vw;
     }
-    .fixed-button {
-        padding: 0.6rem 0.8rem 0.6rem 1rem;
+    .description-text {
+        line-height: 1.7;
     }
+
     /* aboutセクションについて */
     .about-portrait {
         width: 90vw;
@@ -685,55 +689,44 @@ footer a {
     /* ラボ紹介セクションについて */
     .labo-container {
         grid-template-rows: repeat(6, 130px);
-        gap: 0.8rem;
+        /* gap: 0.8rem; */
     }
     .labo-text {
-        padding: 1rem 0.8rem 1rem 0;
+        padding: 2rem 0.8rem 1rem 0.5rem;
     }
-    .labo-text ul {
-        line-height: 1rem;
-        font-size: 0.7rem;
+    .map {
+        padding: 1.5rem;
+    }
+    .map-frame {
+        width: 100%;
     }
     /* クラス紹介セクションについて */
     .accordion-front {
         gap: 0.5rem;
     }
     .accordion-box img {
-        height: 150px;
-        width: 200px;
-    }
-    .accordion-title {
-        font-size: 1.5rem;
+        height: 130px;
+        width: 180px;
     }
     .accordion-header p {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
     .accordion-front-text {
-        visibility: hidden;
-        max-height: 0;
-    }
-    .accordion-title.option {
-        font-size: 1.2rem;
-    }
-    h4.option {
-        font-size: 1rem;
+        /* visibility: hidden;
+        max-height: 0; */
+        font-size: 0.8rem;
     }
     /* こんな人におすすめ */
     .recomend {
         width: 100%;
-        padding: 1rem;
-    }
-    .recomend-title {
-        font-size: 1.1rem;
-    }
-    .recomend li {
-        margin-bottom: 0.3rem;
-        font-size: 0.8rem;
     }
     /* よくある質問について */
+    .questions {
+        width: 90%;
+        margin: 0 auto;
+    }
     .questions summary {
         height: 1rem;
-        width: 90%;
         font-size: 0.8rem;
         padding-top: 0rem;
     }
@@ -747,18 +740,12 @@ footer a {
         height: 5rem;
     }
     .voice-card {
-        width: 300px;
-        height: 430px;
+        width: 220px;
+        height: 300px;
         padding: 2rem 1rem;
     }
     .voice-info {
-        margin: 0.8rem;
-        line-height: 0.2;
-        font-size: 0.6rem;
-    }
-    .voice-text {
-        line-height: 1.5;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
