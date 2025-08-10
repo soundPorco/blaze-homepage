@@ -3,13 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- bootstrap -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous"
-        />
         <!-- googleアイコン -->
         <link
             rel="stylesheet"
@@ -35,13 +28,58 @@
 
     <!-- body_strat -->
     <body>
-        <header>
+        <header class="navbar">
             <!-- ナビバー -->
-            <nav
+
+            <img src="images/logo.png" class="navbar-logo" alt="logo" />
+
+            <!-- ハンバーガーボタン -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- ナビゲーションメニュー -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined">
+                                home </span
+                            >HOME</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined">
+                                article </span
+                            >ABOUT</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined">
+                                location_on </span
+                            >MAP</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><span class="material-symbols-outlined">
+                                perm_media </span
+                            >GALLERY</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- ナビバー終了 -->
+
+        <!-- <nav
                 class="navbar customNavbar navbar-expand-md navbar-dark fixed-top border-bottom border-2"
             >
                 <div class="container-fluid">
-                    <!-- ロゴマーク -->
                     <a class="navbar-brand" href="#">
                         <img
                             src="images/logo.png"
@@ -110,93 +148,86 @@
                         </ul>
                     </div>
                 </div>
-            </nav>
-            <!-- 参加するボタン -->
-            <button class="fixed-button shadow">
-                <a href="#">
-                    <div>
-                        <h3>JOIN US</h3>
-                        <p>参加する</p>
-                    </div>
-                    <span class="material-symbols-outlined"> arrow_right </span>
-                </a>
-            </button>
-            <!-- ナビバー終了 -->
-            <div class="space"></div>
-            <div class="mv">
-                <img
-                    src="https://placehold.co/500x350"
-                    alt="メインビジュアル"
-                />
-            </div>
-            <!-- キャッチコピー -->
-            <!-- <div class="catchCopy">
+            </nav> -->
+        <!-- 参加するボタン -->
+        <button class="fixed-button shadow">
+            <a href="#">
+                <div>
+                    <h3>JOIN US</h3>
+                    <p>参加する</p>
+                </div>
+                <span class="material-symbols-outlined"> arrow_right </span>
+            </a>
+        </button>
+        <!-- ナビバー終了 -->
+        <div class="space"></div>
+        <div class="mv">
+            <img src="https://placehold.co/500x350" alt="メインビジュアル" />
+        </div>
+        <!-- キャッチコピー -->
+        <!-- <div class="catchCopy">
                 <h1 class="mainCatchCopy">GO BLAZE A TRAIL FOR THE FUTURE</h1>
             </div>
             <p class="subCatchCopy">未来を切り拓け</p> -->
 
-            <!-- スライダー全体 -->
-            <div class="swiperBackImg img-fluid">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <!-- 各スライド -->
-                        <div class="swiper-slide">
-                            <img
-                                src="images/demo_swiper.jpg"
-                                alt="キャンペーン1"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                src="https://placehold.co/500x350"
-                                alt="キャンペーン2"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                src="https://placehold.co/500x350"
-                                alt="キャンペーン3"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                src="https://placehold.co/500x350"
-                                alt="キャンペーン4"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                src="https://placehold.co/500x350"
-                                alt="キャンペーン5"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                src="https://placehold.co/500x350"
-                                alt="キャンペーン5"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                src="https://placehold.co/500x350"
-                                alt="キャンペーン5"
-                            />
-                        </div>
-                        <div class="swiper-slide">
-                            <img
-                                src="https://placehold.co/500x350"
-                                alt="キャンペーン5"
-                            />
-                        </div>
+        <!-- スライダー全体 -->
+        <div class="swiperBackImg img-fluid">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- 各スライド -->
+                    <div class="swiper-slide">
+                        <img src="images/demo_swiper.jpg" alt="キャンペーン1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="キャンペーン2"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="キャンペーン3"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="キャンペーン4"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="キャンペーン5"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="キャンペーン5"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="キャンペーン5"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://placehold.co/500x350"
+                            alt="キャンペーン5"
+                        />
                     </div>
                 </div>
-                <!-- ドット（ページネーション） -->
-                <div class="swiper-pagination"></div>
-                <!-- 前後ボタン -->
-                <div class="swiper-button-prev text-dark"></div>
-                <div class="swiper-button-next text-dark"></div>
             </div>
-        </header>
+            <!-- ドット（ページネーション） -->
+            <div class="swiper-pagination"></div>
+            <!-- 前後ボタン -->
+            <div class="swiper-button-prev text-dark"></div>
+            <div class="swiper-button-next text-dark"></div>
+        </div>
 
         <main>
             <!-- ABOUTゾーン -->

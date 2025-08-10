@@ -1,3 +1,11 @@
+// ナビバーの実装
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
 // Swiperのjs
 const swiper = new Swiper(".swiper", {
     slidesPerView: 3, // 例: 一度に3枚のスライドを表示

@@ -82,45 +82,64 @@ main {
 }
 
 /* ヘッダーとナビバー */
-header {
+.navbar {
+    position: fixed;
+    z-index: 1000; /* 最前面に */
     width: 100vw;
-}
-.customNavbar {
+    padding: 0 20px;
+    box-sizing: border-box; /* パディング分を幅に含める */
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
     background-color: rgb(27.5, 27.5, 27.5);
-    padding: 0.5rem;
-    height: 80px;
-    width: 100vw;
+}
+.navbar-logo {
+    object-fit: cover;
+    max-height: 60px;
+    max-width: auto;
+}
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
 }
 
-.navbar-brand img {
-    height: 60px;
-    width: auto;
-}
-
-.nav-link {
-    color: #fff !important;
-    font-weight: 500;
-    margin: 0 0.5rem;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.nav-link:hover {
-    background-color: #fff;
-    color: #111 !important;
-    border-radius: 3rem;
-    border: 2px solid #fff;
-}
-.nav-item a {
+.nav-menu ul li a {
     display: flex;
     align-items: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-family: "Oswald";
+    font-size: 20px;
+    border: none;
+    border-radius: 100px;
+    object-fit: fill;
+}
+.nav-menu ul li a:hover {
+    transition: all 0.3s ease;
+    color: black;
+    background-color: white;
+}
+/* ハンバーガーボタン */
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
 
-/* ロゴ */
-.logo {
-    width: 90px;
-    height: auto;
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
 }
+
+/* ナビバー終了 */
+
 /* 参加ボタン */
 .fixed-button {
     position: fixed;
@@ -659,8 +678,53 @@ footer a {
 
 /* スマホ用 */
 @media (max-width: 768px) {
+    /* ナビバーについて */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        z-index: 2001; /* メニューより上に */
+    }
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: -100%; /* 最初は画面外（上） */
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #444;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* 中央に縦並び */
+        transition: top 0.3s ease;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* 表示状態 */
+    .nav-menu.active {
+        top: 0; /* 下に降ろす */
+    }
+    /* ナビバーについて終了 */
+
     html {
-        font-size: 75%;
+        font-size: 80%;
     }
     main {
         max-width: 95vw;
@@ -762,11 +826,11 @@ footer a {
     }
     .voice-card {
         width: 220px;
-        height: 360px;
+        height: 420px;
         padding: 2rem 1rem;
     }
     .voice-info {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }
 
