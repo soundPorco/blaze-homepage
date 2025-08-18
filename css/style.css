@@ -80,6 +80,7 @@ main {
 .voice-section {
     margin: 0 auto;
     max-width: 90%;
+    text-align: center;
 }
 
 /* ヘッダーとナビバー */
@@ -430,9 +431,9 @@ h4.option {
 /* 月会費、諸費用について */
 .tuition-container {
     line-height: 2;
-    width: 85%;
     margin: 0 auto;
     padding: 1rem 1.5rem 2.5rem;
+    text-align: left;
 }
 .tuition-title {
     font-weight: bold;
@@ -445,6 +446,7 @@ h4.option {
 .attention {
     font-size: 0.7rem;
     color: red;
+    width: 90%;
 }
 
 /* よくある質問 */
