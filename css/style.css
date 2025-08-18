@@ -38,11 +38,13 @@ button:hover {
     border-left: 0.5rem solid red;
     padding-left: 0.5em;
     font-family: "Oswald";
+    text-align: left;
 }
 .sub-heading-text {
     margin-left: 1rem;
     color: red;
     letter-spacing: 0.5rem;
+    text-align: left;
 }
 .large {
     font-size: 3rem;
@@ -485,7 +487,7 @@ h4.option {
 .voice-card {
     background-color: #ccc;
     width: 450px;
-    height: 430px;
+    height: 550px;
     border-radius: 1rem;
     text-align: left;
     padding: 2rem 2.5rem;
@@ -516,8 +518,15 @@ h4.option {
 }
 
 /* ギャラリー */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
 .gallery img {
-    width: 90%;
+    width: 100%;
+    height: auto;
     border-radius: 1rem;
     /* hover時に滑らかな動きになる↓*/
     transition: transform 0.3s ease;
@@ -526,21 +535,29 @@ h4.option {
     transform: scale(1.05);
 }
 
+.more-center {
+    display: flex;
+    justify-content: center;
+}
 .more {
     background-color: #ff5722;
     color: white;
     padding: 0.4rem 1rem;
-    display: flex;
-    align-items: center;
+    margin: 15px;
     border: none;
+    border-radius: 100px;
     transition: 0.3s;
     font-family: "Oswald", sans-serif;
-    margin: 0 auto;
+    height: 50px;
 }
 
 .more a {
+    display: flex;
+    align-items: center;
     text-decoration: inherit;
     color: inherit;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
 }
 
 /* footerのCSS */
@@ -651,6 +668,10 @@ footer a {
         font-weight: bold;
         font-size: 1.5rem;
         margin-top: 2rem;
+    }
+    /* ギャラリーについて */
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -818,6 +839,10 @@ footer a {
     }
     .voice-info {
         font-size: 0.7rem;
+    }
+    /* ギャラリーについて */
+    .gallery-container {
+        grid-template-columns: 1fr;
     }
 }
 
