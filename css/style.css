@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 /* 1. 共通設定 */
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: sans-serif;
     color: black;
@@ -585,6 +588,16 @@ footer a {
     .sub-medium {
         font-size: 0.8rem;
     }
+    /* ナビバーについて */
+    .navbar {
+        height: 80px;
+    }
+    .navbar-logo {
+        max-height: 50px;
+    }
+    .nav-menu ul li a {
+        font-size: 16px;
+    }
     /* aboutセクションについて */
     .about-container {
         flex-direction: column;
@@ -644,6 +657,12 @@ footer a {
 /* スマホ用 */
 @media (max-width: 768px) {
     /* ナビバーについて */
+    .navbar {
+        height: 60px;
+    }
+    .navbar-logo {
+        max-height: 40px;
+    }
     .hamburger {
         display: flex;
         flex-direction: column;
