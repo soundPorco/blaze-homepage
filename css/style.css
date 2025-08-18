@@ -68,7 +68,7 @@ button:hover {
 /* 各セクションのwidth調整 */
 main {
     width: auto;
-    max-width: 80vw;
+    max-width: 80%;
     margin: 0 auto;
 }
 .about-section,
@@ -79,14 +79,14 @@ main {
 .question-section,
 .voice-section {
     margin: 0 auto;
-    max-width: 70vw;
+    max-width: 90%;
 }
 
 /* ヘッダーとナビバー */
 .navbar {
     position: fixed;
     z-index: 1000; /* 最前面に */
-    width: 100vw;
+    width: 100%;
     padding: 0 20px;
     box-sizing: border-box; /* パディング分を幅に含める */
     height: 100px;
@@ -181,8 +181,9 @@ main {
 
 /* メインビジュアル */
 .mv {
-    height: 70vh;
-    width: 100vw;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* アスペクト比を指定 */
+    object-fit: cover;
 }
 .mv img {
     height: 100%;
@@ -216,7 +217,7 @@ main {
 /* スライダー背景 */
 .swiperBackImg {
     width: 100%;
-    height: 30vh;
+    height: 30%;
     overflow: hidden;
     position: relative;
     margin-bottom: 0;
@@ -224,7 +225,7 @@ main {
     margin: 1.5rem 0;
 }
 .swiper {
-    width: 90vw;
+    width: 90%;
     height: 100%;
 }
 .swiper-slide img {
@@ -511,8 +512,8 @@ h4.option {
 
 /* ギャラリー */
 .gallery img {
+    width: 90%;
     border-radius: 1rem;
-    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); */
     /* hover時に滑らかな動きになる↓*/
     transition: transform 0.3s ease;
 }
@@ -537,45 +538,6 @@ h4.option {
     color: inherit;
 }
 
-/* コンタクトのcss */
-.contact {
-    margin: 300px auto 200px auto;
-    padding: 80px;
-    background-color: rgba(45, 44, 44, 0.7);
-}
-.lastImg {
-    height: 1300px;
-    background-image: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.279) 70%,
-            white 90%
-        ),
-        url("../images/contact_bg.jpg");
-    background-size: cover;
-}
-.info {
-    font-size: x-large;
-}
-
-.info h3 {
-    color: aliceblue;
-}
-.info a {
-    color: rgb(255, 225, 0);
-    transition: color 0.5s ease;
-}
-.info a:hover {
-    color: rgb(235, 70, 70);
-}
-.info p {
-    color: rgb(255, 225, 0);
-    border-bottom: 1px solid rgb(255, 225, 0);
-}
-.spaceContent {
-    height: 100px;
-    visibility: hidden;
-}
-
 /* footerのCSS */
 footer img {
     filter: grayscale(40%);
@@ -593,7 +555,7 @@ footer a {
 /* タブレット用 */
 @media (max-width: 991px) {
     main {
-        max-width: 90vw;
+        max-width: 90%;
     }
     .about-section,
     .labo-section,
@@ -603,7 +565,6 @@ footer a {
     .question-section,
     .voice-section {
         margin: 0 auto;
-        max-width: 85vw;
     }
     /* heading-textについて */
     .sub-heading-text {
@@ -702,7 +663,7 @@ footer a {
         top: -100%; /* 最初は画面外（上） */
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background: #444;
         display: flex;
         flex-direction: column;
@@ -742,12 +703,11 @@ footer a {
     .tuition-section,
     .question-section {
         margin: 0 auto;
-        max-width: 90vw;
     }
     /* モバイルメニュー展開時に背景色を適用 */
     .navbar-collapse {
         background-color: rgb(27.5, 27.5, 27.5); /* 同じ色を設定 */
-        width: 100vw; /* 画面幅いっぱいに広げる */
+        width: 100%; /* 画面幅いっぱいに広げる */
         margin: 0;
         padding: 1rem 0;
     }
@@ -763,7 +723,7 @@ footer a {
     }
     .voice-section {
         margin: 0 auto;
-        max-width: 100vw;
+        max-width: 100%;
     }
     .description-text {
         line-height: 1.7;
@@ -771,7 +731,7 @@ footer a {
 
     /* aboutセクションについて */
     .about-portrait {
-        width: 90vw;
+        width: 90%;
         max-height: 220px;
     }
     /* ラボ紹介セクションについて */
