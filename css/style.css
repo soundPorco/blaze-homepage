@@ -9,6 +9,7 @@ body {
     padding: 0;
     line-height: 1.2;
     font-weight: 500;
+    overflow-x: hidden;
 }
 
 button {
@@ -242,6 +243,7 @@ main {
     margin-bottom: 3rem;
 }
 .about-portrait {
+    width: 100%; /* 修正: 画面幅に合わせて調整 */
     width: 600px;
     max-height: 500px;
     object-fit: cover;
@@ -707,6 +709,10 @@ footer a {
         align-items: center;
         justify-content: center; /* 中央に縦並び */
         transition: top 0.3s ease;
+    }
+    /* ナビメニューの表示状態 */
+    .nav-menu.active {
+        top: 0; /* メニューを表示する */
     }
 
     .nav-menu ul {
