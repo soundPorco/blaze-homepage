@@ -39,6 +39,8 @@ button:hover {
     padding-left: 0.5em;
     font-family: "Oswald";
     text-align: left;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
 }
 .sub-heading-text {
     margin-left: 1rem;
@@ -274,7 +276,7 @@ main {
 
 .labo-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 200px);
     gap: 1.5rem;
 }
@@ -285,20 +287,21 @@ main {
     border: none;
     border-radius: 1rem;
 }
+/* gridの組み替え部分 */
 .labo-main-img {
-    grid-column: 1/3;
+    grid-column: 1/2;
     grid-row: 1/3;
 }
 .labo-item1 {
-    grid-column: 3/5;
+    grid-column: 2/3;
     grid-row: 1/2;
 }
 .labo-item2 {
-    grid-column: 1/3;
+    grid-column: 1/2;
     grid-row: 3/4;
 }
 .labo-text {
-    grid-column: 3/5;
+    grid-column: 2/3;
     grid-row: 2/4;
     border: 0;
     border-radius: 1rem;
@@ -307,10 +310,11 @@ main {
 .labo-text ul {
     font-size: 1.1rem;
     line-height: 2rem;
+    text-align: left;
 }
 /* マップのやつ */
 .map {
-    grid-column: 1/5;
+    grid-column: 1/3;
     grid-row: 4/7;
     border: 0;
     border-radius: 1rem;
@@ -472,6 +476,7 @@ h4.option {
     width: 100%;
     font-weight: bold;
     padding-top: 0.7rem;
+    text-align: left;
 }
 .questions p {
     padding-top: 1.5rem;
@@ -746,6 +751,10 @@ footer a {
     .question-section {
         margin: 0 auto;
     }
+    .gallery-container {
+        width: 90%;
+        margin: 0 auto;
+    }
     /* モバイルメニュー展開時に背景色を適用 */
     .navbar-collapse {
         background-color: rgb(27.5, 27.5, 27.5); /* 同じ色を設定 */
@@ -772,15 +781,45 @@ footer a {
     }
 
     /* aboutセクションについて */
+
     .about-portrait {
         width: 90%;
         max-height: 220px;
     }
     /* ラボ紹介セクションについて */
+    /* gridの組み替え部分 */
+    .labo-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 200px);
+    }
+    .labo-main-img {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    .labo-item1 {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .labo-item2 {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .labo-text {
+        grid-column: 1/3;
+        grid-row: 3/5;
+        padding: 2rem;
+    }
+    .map {
+        grid-column: 1/3;
+        grid-row: 5/8;
+    }
+    /* gridの組み替え部分終了 */
+
     .labo-container {
         grid-template-rows: repeat(6, 130px);
         /* gap: 0.8rem; */
     }
+
     .labo-text {
         padding: 2rem 0.8rem 1rem 0.5rem;
     }
@@ -834,7 +873,7 @@ footer a {
     }
     .voice-card {
         width: 220px;
-        height: 420px;
+        height: 500px;
         padding: 2rem 1rem;
     }
     .voice-info {
