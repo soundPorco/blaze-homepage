@@ -105,6 +105,9 @@ main {
     color: white;
     background-color: rgb(27.5, 27.5, 27.5);
 }
+.mvSpace {
+    height: 70px; /* ナビバーの高さに合わせる */
+}
 .navbar-logo {
     object-fit: cover;
     max-height: 60px;
@@ -688,6 +691,9 @@ footer a {
     }
     .navbar-logo {
         max-height: 40px;
+    }
+    .mvSpace {
+        height: 50px; /* ナビバーの高さに合わせる */
     }
     .hamburger {
         display: flex;
