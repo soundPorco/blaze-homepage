@@ -785,6 +785,9 @@ footer a {
     .description-text {
         line-height: 1.7;
     }
+    .swiperBackImg {
+        height: 15vh; /* 高さを調整 */
+    }
 
     /* aboutセクションについて */
 
@@ -888,26 +891,5 @@ footer a {
     /* ギャラリーについて */
     .gallery-container {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 992px) {
-    /* top用 */
-    .swiperBackImg {
-        height: 80%;
-        width: 100%;
-    }
-}
-
-@media (max-width: 550px) {
-    /* swiper用 */
-    .swiper {
-        width: 100vw;
-        height: 250px;
-    }
-    /* footer用 */
-    .address p {
-        margin: 5px 8px;
-        padding: 0;
     }
 }
