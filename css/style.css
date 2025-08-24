@@ -483,6 +483,7 @@ h4.option {
 }
 .questions p {
     padding-top: 1.5rem;
+    text-align: left;
 }
 
 /* みんなの声について */
@@ -938,7 +939,7 @@ footer .copy {
         height: 5rem;
     }
     .voice-card {
-        width: 220px;
+        width: 250px;
         height: 500px;
         padding: 2rem 1rem;
     }
