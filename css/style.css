@@ -556,6 +556,7 @@ h4.option {
     border-radius: 100px;
     transition: 0.3s;
     font-family: "Oswald", sans-serif;
+    font-weight: 600;
     height: 50px;
 }
 
@@ -565,18 +566,65 @@ h4.option {
     text-decoration: inherit;
     color: inherit;
     font-family: "Oswald", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 /* footerのCSS */
-footer img {
+footer {
+    background-color: rgb(230, 30, 30);
+    padding: 4rem;
+}
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    border-top: black 1px solid;
+    border-bottom: black 1px solid;
+    margin-bottom: 2rem;
+}
+.footer-logo {
     filter: grayscale(40%);
     max-width: 180px;
     height: auto;
+    border: none;
+    border-radius: 100px;
+}
+.address {
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 2rem;
+    text-align: left;
+}
+.footer-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    letter-spacing: 0.05rem;
+    font-family: "Oswald", sans-serif;
+}
+.footer-menu h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
 }
 footer a {
     color: inherit; /* 親要素と同じ色にする（または任意の色に変更） */
     text-decoration: none; /*下線をなくす */
+}
+footer .copy {
+    text-align: center;
+    font-size: 0.8rem;
+    color: white;
+    margin-top: 1rem;
 }
 
 /* メディアクエリ：スマホ対応 */
@@ -680,6 +728,15 @@ footer a {
     /* ギャラリーについて */
     .gallery-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    /* footerについて */
+    .address {
+        font-size: 0.9rem;
+        line-height: 1;
+    }
+    .footer-menu {
+        gap: 2rem;
+        margin-left: 3rem;
     }
 }
 
@@ -891,5 +948,19 @@ footer a {
     /* ギャラリーについて */
     .gallery-container {
         grid-template-columns: 1fr;
+    }
+    /* footerについて */
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footer-menu {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    footer ul {
+        text-align: center;
     }
 }
