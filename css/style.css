@@ -429,13 +429,23 @@ h4.option {
 
 /* 今後開設予定のクラスについて */
 .upcoming {
-    text-align: center;
+    text-align: left;
     margin-top: 5rem;
 }
 .upcoming h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
     font-weight: bold;
+    text-align: center;
+}
+.upcoming ul {
+    line-height: 1.5;
+}
+
+.note {
+    font-size: 0.8rem;
+    color: red;
+    text-align: center;
 }
 /* 練習時間について */
 .time-section ul {
@@ -448,8 +458,8 @@ h4.option {
 /* 月会費、諸費用について */
 .tuition-container {
     line-height: 2;
-    margin: 0 auto;
-    padding: 1rem 1.5rem 2.5rem;
+    margin: 0;
+    padding: 1rem 0rem;
     text-align: left;
 }
 .tuition-title {
@@ -458,10 +468,10 @@ h4.option {
     margin-top: 2rem;
 }
 .tuition-section ul {
-    list-style: none;
+    list-style: number;
 }
 .attention {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: red;
     width: 90%;
 }
@@ -807,7 +817,7 @@ footer .copy {
     /* ナビバーについて終了 */
 
     html {
-        font-size: 80%;
+        font-size: 95%;
     }
     main {
         max-width: 95vw;
@@ -857,6 +867,12 @@ footer .copy {
     .about-portrait {
         width: 90%;
         max-height: 220px;
+    }
+    .about-section h2 {
+        font-size: 2.5rem;
+    }
+    .about-section p {
+        font-size: 1rem;
     }
     /* ラボ紹介セクションについて */
     /* gridの組み替え部分 */
@@ -944,8 +960,8 @@ footer .copy {
         height: 5rem;
     }
     .voice-card {
-        width: 250px;
-        height: 500px;
+        width: 300px;
+        height: 580px;
         padding: 2rem 1rem;
     }
     .voice-info {
