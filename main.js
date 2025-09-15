@@ -44,3 +44,46 @@ document.querySelectorAll(".accordion-box").forEach((box) => {
     });
     console.log("hello");
 });
+
+// タイピングアニメーション
+function typeText(element, text, speed = 80, callback) {
+    let i = 0;
+    function typing() {
+        if (i <= text.length) {
+            element.innerHTML = text.slice(0, i);
+            i++;
+            setTimeout(typing, speed);
+        } else if (callback) {
+            callback();
+        }
+    }
+    typing();
+}
+
+// 実行
+function runTypingAnimation() {
+    const title = document.getElementById("typing-title");
+    const sub = document.getElementById("typing-sub");
+    const theme = document.getElementById("typing-theme");
+    const vertical = document.querySelector(".vertical-text > div");
+
+    // 初期状態を空に
+    title.textContent = "";
+    sub.textContent = "";
+    theme.textContent = "";
+    vertical.textContent = "";
+
+    typeText(title, "TOKUSHIMA U15 & U12", 80, () => {
+        typeText(sub, "BASKETBALL SCHOOL", 80, () => {
+            typeText(theme, "「地域の育成環境をより良くする」", 80, () => {
+                typeText(vertical, "a representative RYO MIZUKAMI", 80);
+            });
+        });
+    });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    runTypingAnimation();
+    // 10秒ごとに繰り返す（必要に応じて時間調整）
+    setInterval(runTypingAnimation, 10000);
+});

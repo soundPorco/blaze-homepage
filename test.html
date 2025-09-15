@@ -1,128 +1,128 @@
-<section id="practice-time" class="my-8 px-4 max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">練習時間</h2>
-    <p>平日5日間（月～金）</p>
-    <ul class="list-disc list-inside mb-2">
-        <li>① 18:15〜19:45</li>
-        <li>② 20:00〜21:30</li>
-    </ul>
-    <p class="mb-1">
-        ※クラス①は曜日により19:15〜20:45など変更になる場合がございます。
-    </p>
-    <p>※開始15分前よりコートのご利用が可能です。</p>
-</section>
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>斜めライン＋バスケ背景</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: "Noto Sans JP", sans-serif;
+                background: #0a0a0a;
+                color: white;
+                overflow: hidden;
+            }
 
-<section id="pricing" class="my-8 px-4 max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">料金案内（すべて税込）</h2>
+            .hero {
+                position: relative;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                overflow: hidden;
+            }
 
-    <h3 class="text-xl font-semibold mb-2">月会費（選択制）</h3>
-    <ul class="list-disc list-inside mb-4 space-y-1">
-        <li>① 週1回コース（月4回）………￥5,500</li>
-        <li>② 週2回コース（月8回）………￥9,900</li>
-        <li>③ 週1回＋WEEKEND FREE………￥6,600</li>
-        <li>④ 週2回＋WEEKEND FREE………￥11,000</li>
-    </ul>
-    <p class="mb-4">
-        ※WEEKEND
-        FREEは、土日9:00〜17:00の間、施設を自由にご利用いただけるプランです（利用規定あり）。
-    </p>
+            /* 背景の斜めライン */
+            .hero::before {
+                content: "";
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background-image: repeating-linear-gradient(
+                    -45deg,
+                    rgba(255, 215, 0, 0.15) 0px,
+                    rgba(255, 215, 0, 0.15) 40px,
+                    transparent 40px,
+                    transparent 80px
+                );
+                animation: moveStripes 6s linear infinite;
+                z-index: 0;
+            }
 
-    <h3 class="text-xl font-semibold mb-2">その他費用</h3>
-    <ul class="list-disc list-inside space-y-1">
-        <li>入会費……………………………￥5,500</li>
-        <li>年会費……………………………￥5,500</li>
-        <li>スポーツ保険料（年額）………￥1,000</li>
-        <li>決済手数料………………………￥500</li>
-    </ul>
-    <p class="mt-4">
-        ※現在在籍中の会員様におきましては、入会費・今年度の年会費・スポーツ保険料は不要です。
-    </p>
-</section>
-<style>
-    .time-select-container {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin: 40px 0;
-        flex-wrap: wrap;
-    }
+            @keyframes moveStripes {
+                from {
+                    background-position: 0 0;
+                }
+                to {
+                    background-position: 200px 200px;
+                }
+            }
 
-    .time-box {
-        background-color: #ffe5b4;
-        border: 4px solid #ff8c00;
-        border-radius: 16px;
-        padding: 30px 40px;
-        width: 280px;
-        text-align: center;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
+            /* バスケットボールのSVG背景 */
+            .basketball-bg {
+                position: absolute;
+                top: 10%;
+                left: -5%;
+                width: 300px;
+                height: 300px;
+                opacity: 0.07;
+                transform: rotate(-15deg);
+                z-index: 1;
+            }
 
-    .time-box:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-    }
+            /* メインコピー */
+            .hero-main {
+                font-size: 3rem;
+                font-weight: bold;
+                transform: rotate(-5deg);
+                background: rgba(0, 0, 0, 0.6);
+                border: 3px solid #ffd700;
+                padding: 1rem 2rem;
+                z-index: 2;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            }
 
-    .time-title {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #d35400;
-        font-family: "Oswald", sans-serif;
-        margin-bottom: 10px;
-    }
+            /* サブコピー */
+            .hero-sub {
+                margin-top: 2rem;
+                font-size: 1.8rem;
+                font-weight: 600;
+                transform: rotate(3deg);
+                color: #00c4ff;
+                background: rgba(0, 0, 0, 0.6);
+                border: 2px solid #00c4ff;
+                padding: 0.5rem 1.2rem;
+                z-index: 2;
+            }
 
-    .time-range {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #444;
-    }
+            /* 背景装飾の大文字 */
+            .hero-bg-text {
+                position: absolute;
+                bottom: 10%;
+                right: -5%;
+                font-size: 7rem;
+                font-weight: 900;
+                color: rgba(255, 255, 255, 0.05);
+                transform: rotate(-15deg);
+                white-space: nowrap;
+                user-select: none;
+                pointer-events: none;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="hero">
+            <!-- バスケットボールSVG（透過装飾） -->
+            <svg
+                class="basketball-bg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 496"
+                fill="white"
+            >
+                <circle cx="248" cy="248" r="240" />
+                <path
+                    d="M248 8c-38.6 0-75.2 9.2-107.2 25.6C190.4 93.6 248 194.4 248 248s-57.6 154.4-107.2 214.4C172.8 478.8 209.4 488 248 488s75.2-9.2 107.2-25.6C305.6 402.4 248 301.6 248 248s57.6-154.4 107.2-214.4C323.2 17.2 286.6 8 248 8z"
+                />
+            </svg>
 
-    .time-heading {
-        text-align: center;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        font-weight: bold;
-        font-family: "Oswald", sans-serif;
-        border-left: 6px solid #ff5722;
-        padding-left: 12px;
-    }
-</style>
-
-<section id="practice-time" class="my-8 px-4 max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">練習時間</h2>
-    <p>平日5日間（月～金）</p>
-    <ul class="list-disc list-inside mb-2">
-        <li>① 18:15〜19:45</li>
-        <li>② 20:00〜21:30</li>
-    </ul>
-    <p class="mb-1">
-        ※クラス①は曜日により19:15〜20:45など変更になる場合がございます。
-    </p>
-    <p>※開始15分前よりコートのご利用が可能です。</p>
-</section>
-
-<section id="pricing" class="my-8 px-4 max-w-3xl mx-auto">
-    <h2 class="text-2xl font-semibold mb-4">料金案内（すべて税込）</h2>
-
-    <h3 class="text-xl font-semibold mb-2">月会費（選択制）</h3>
-    <ul class="list-disc list-inside mb-4 space-y-1">
-        <li>① 週1回コース（月4回）………￥5,500</li>
-        <li>② 週2回コース（月8回）………￥9,900</li>
-        <li>③ 週1回＋WEEKEND FREE………￥6,600</li>
-        <li>④ 週2回＋WEEKEND FREE………￥11,000</li>
-    </ul>
-    <p class="mb-4">
-        ※WEEKEND
-        FREEは、土日9:00〜17:00の間、施設を自由にご利用いただけるプランです（利用規定あり）。
-    </p>
-
-    <h3 class="text-xl font-semibold mb-2">その他費用</h3>
-    <ul class="list-disc list-inside space-y-1">
-        <li>入会費……………………………￥5,500</li>
-        <li>年会費……………………………￥5,500</li>
-        <li>スポーツ保険料（年額）………￥1,000</li>
-        <li>決済手数料………………………￥500</li>
-    </ul>
-    <p class="mt-4">
-        ※現在在籍中の会員様におきましては、入会費・今年度の年会費・スポーツ保険料は不要です。
-    </p>
-</section>
+            <div class="hero-main">『地域の育成環境をより良くする』</div>
+            <div class="hero-sub">TOKUSHIMA U15 & U12 BASKETBALL SCHOOL</div>
+            <div class="hero-bg-text">BASKETBALL</div>
+        </section>
+    </body>
+</html>
