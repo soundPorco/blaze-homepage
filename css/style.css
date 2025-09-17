@@ -701,6 +701,7 @@ h4.option {
     transition: all 0.3s ease;
     color: goldenrod;
 }
+
 .footer-logo {
     font-family: "Oswald", sans-serif;
     text-align: center;
@@ -749,6 +750,7 @@ h4.option {
 }
 .sns-icon-link {
     font-weight: 800;
+    fill: goldenrod;
 }
 
 /* 最後のコピーライト部分 */
