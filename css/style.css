@@ -172,14 +172,14 @@ main {
 /* 参加ボタン */
 .fixed-button {
     position: fixed;
-    bottom: 1.5rem; /* 下から20px */
-    right: 1.5rem; /* 右から20px */
-    padding: 1rem 1rem 1rem 1.2rem;
+    bottom: 8rem;
+    right: 0;
+    padding: 0.5rem 0.5rem 0.5rem 1.2rem;
     font-weight: bold;
     background-color: orange;
     color: white;
     border: none;
-    border-radius: 3rem;
+    border-radius: 3rem 0 0 3rem;
     cursor: pointer;
     z-index: 1000; /* 最前面に */
 }
@@ -319,7 +319,7 @@ main {
     flex-direction: row;
     align-items: center; /* 縦軸の中央揃え */
     margin-bottom: 3rem;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
 .about-portrait {
     width: 100%; /* 修正: 画面幅に合わせて調整 */
@@ -613,9 +613,9 @@ h4.option {
 
 /* その他のセクション */
 .other-section {
-    background-color: steelblue;
+    background-color: gainsboro;
     padding: 8rem 0 12rem 0;
-    color: white;
+    color: black;
 }
 
 .other-title {
@@ -628,7 +628,6 @@ h4.option {
 .other-sub-title {
     text-align: center;
     font-size: 1rem;
-    color: white;
     letter-spacing: 0.2rem;
     margin-bottom: 3rem;
 }
@@ -653,9 +652,9 @@ h4.option {
     top: 0;
     left: 0;
     width: 300px;
-    height: 150px;
+    height: 130px;
     border-radius: 1rem;
-    background: gainsboro;
+    background: gray;
     opacity: 0.7;
     z-index: 0;
     transition: opacity 0.3s;
@@ -665,11 +664,11 @@ h4.option {
     position: absolute;
     top: 0;
     left: 0;
-    height: 150px;
+    height: 130px;
     width: 300px;
     border-radius: 1rem;
     background-color: white;
-    color: steelblue;
+    color: black;
     padding: 1rem 1.5rem;
     text-align: center;
     display: flex;
@@ -685,108 +684,86 @@ h4.option {
 .others-title {
     font-size: 1.8rem;
     font-weight: bold;
-    margin: 1.5rem 0 0.5rem;
+    margin-bottom: 0.5rem;
     font-family: "Oswald", sans-serif;
 }
 /* その他のセクション終了 */
 
-/* ギャラリー */
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-.gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    /* hover時に滑らかな動きになる↓*/
-    transition: transform 0.3s ease;
-}
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-.more-center {
-    display: flex;
-    justify-content: center;
-}
-.more {
-    background-color: #ff5722;
-    color: white;
-    padding: 0.4rem 1rem;
-    margin: 15px;
-    border: none;
-    border-radius: 100px;
-    transition: 0.3s;
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    height: 50px;
-}
-
-.more a {
-    display: flex;
-    align-items: center;
-    text-decoration: inherit;
-    color: inherit;
-    font-family: "Oswald", sans-serif;
-    font-size: 1.8rem;
-}
-
 /* footerのCSS */
-footer {
-    background-color: black;
-    padding: 12rem 2rem 2rem 2rem;
-    border-radius: 1000px 1000px 0 0/ 50px 50px 0 0;
-    margin-top: -100px;
-
-    color: white;
-}
 .footer-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    gap: 1rem;
-    padding: 2rem 5rem;
-    border-top: white 1px solid;
-    border-bottom: white 1px solid;
-    margin-bottom: 2rem;
+    border-radius: 1000px 1000px 0 0/ 20px 20px 0 0;
+    padding: 3rem 5rem 2rem;
+    color: white;
+    margin-top: -100px;
+    background-color: rgb(0, 100, 170);
+}
+.footer-container a:hover {
+    transition: all 0.3s ease;
+    color: goldenrod;
 }
 .footer-logo {
-    filter: grayscale(40%);
-    max-width: 150px;
-    height: auto;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+}
+.footer-logo h3 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+}
+.footer-logo p {
+    font-weight: 200;
+    font-size: 0.6rem;
+    line-height: 0.6rem;
+    margin: 0;
+    padding: 0;
+}
+.footer-menu-container {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-menu {
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    gap: 3rem;
+    font-size: 1.2rem;
 }
 
-.footer-menu {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-    letter-spacing: 0.05rem;
-    font-family: "Oswald", sans-serif;
+.footer-menu-container a {
+    color: inherit;
+    /* 親要素と同じ色にする（または任意の色に変更） */
+    text-decoration: none;
+    /*下線をなくす */
+    display: flex;
+    align-items: center;
 }
-.footer-menu h5 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+.footer-menu span {
+    color: goldenrod;
 }
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
+.sns-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.4rem;
 }
-footer a {
-    color: inherit; /* 親要素と同じ色にする（または任意の色に変更） */
-    text-decoration: none; /*下線をなくす */
+.sns-icon-link {
+    font-weight: 800;
 }
-footer .copy {
+
+/* 最後のコピーライト部分 */
+.copy {
     text-align: center;
     font-size: 0.8rem;
     color: white;
-    margin-top: 1rem;
+    margin: 1.5rem 0;
+    background-color: black;
+}
+.copy a {
+    color: inherit;
+    /* 親要素と同じ色にする（または任意の色に変更） */
+    text-decoration: none;
+    /*下線をなくす */
 }
 
 /* メディアクエリ：スマホ対応 */
