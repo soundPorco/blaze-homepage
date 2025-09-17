@@ -6,6 +6,7 @@
 }
 html {
     scroll-behavior: smooth; /* スムーズスクロール */
+    overscroll-behavior: none; /* スクロールのバウンス無効化 */
     overflow-x: hidden;
 }
 body {
@@ -645,6 +646,7 @@ h4.option {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
 }
 /* .othersの後ろの影部分 */
 .others-shadow {
@@ -660,6 +662,16 @@ h4.option {
     transition: opacity 0.3s;
     pointer-events: none;
 }
+/* .basketball-icon {
+    position: absolute;
+    overflow: hidden;
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    pointer-events: none;
+} */
 .others {
     position: absolute;
     top: 0;
@@ -675,10 +687,12 @@ h4.option {
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
+    transform-origin: top right; /* 最初から固定 */
     z-index: 1;
 }
 .others:hover {
     transform: rotate(-10deg);
+    transform-origin: top right; /* 回転の基準点を右上に */
 }
 
 .others-title {
