@@ -76,7 +76,7 @@ function runTypingAnimation() {
     typeText(title, "TOKUSHIMA U15 & U12", 80, () => {
         typeText(sub, "BASKETBALL SCHOOL", 80, () => {
             typeText(theme, "「地域の育成環境をより良くする」", 80, () => {
-                typeText(vertical, "a representative RYO MIZUKAMI", 80);
+                typeText(vertical, "a representative RYO MIZUKAMI", 150);
             });
         });
     });
@@ -84,6 +84,6 @@ function runTypingAnimation() {
 
 window.addEventListener("DOMContentLoaded", () => {
     runTypingAnimation();
-    // 10秒ごとに繰り返す（必要に応じて時間調整）
-    setInterval(runTypingAnimation, 10000);
+    // 15秒ごとに繰り返す（必要に応じて時間調整）
+    setInterval(runTypingAnimation, 15000);
 });

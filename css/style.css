@@ -209,37 +209,26 @@ main {
 
 /* メインビジュアル */
 .mv-space {
-    height: 900px;
+    height: 1000px;
     padding: 100px 60px;
 }
 .mv-section {
-    height: 850px;
+    height: 950px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 0px;
     padding: 30px 60px;
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
-        url("../images/img1.jpg");
+        url("../images/img13.png");
     background-size: cover;
     background-position: center;
-    position: fixed;
+    background-repeat: no-repeat;
+    position: relative;
     z-index: -1;
+    /* 追加：背景画像を固定 */
+    background-attachment: fixed;
 }
-/* 背景のlogoを中央に配置 */
-.mv-bg {
-    display: flex;
-    justify-content: center;
-}
-.mv-logo {
-    height: 200px;
-    width: auto;
-    position: absolute;
-    /* left: -160px; */
-    right: 10%;
-    top: 15%;
-    opacity: 0.2;
-    /* 透過して薄くする */
-}
+
 #typing-title,
 #typing-sub,
 #typing-theme {
@@ -270,11 +259,11 @@ main {
 }
 .mv-title span::first-letter {
     font-size: 5rem;
-    color: steelblue;
+    color: rgb(0, 110, 200);
 }
 
 .mv-theme {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 /* 縦書き */
 .vertical-text {
@@ -316,7 +305,7 @@ main {
 
 /* Aboutセクション */
 .about-section {
-    background-color: white;
+    background-color: whitesmoke;
     padding: 2rem 0;
     border-radius: 0 0 1000px 1000px / 0 0 50px 50px;
     position: relative;
@@ -355,7 +344,7 @@ main {
 
 /* 施設紹介ページ */
 .labo-section {
-    background-color: #333;
+    background-color: black;
     padding: 2rem 0;
     color: white;
     padding-top: 200px;
@@ -363,7 +352,7 @@ main {
 .labo-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 250px);
+    grid-template-rows: repeat(7, 300px);
     gap: 1.5rem;
     max-width: 80%;
     margin: 0 auto;
@@ -622,71 +611,84 @@ h4.option {
     width: 90%;
 }
 
-/* よくある質問 */
-.questions {
-    font-family: sans-serif;
-    cursor: pointer;
-}
-.questions details {
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    /* 質問ごとの間隔 */
-    margin-bottom: 1rem;
-    background-color: whitesmoke;
-}
-.questions summary {
-    height: 2.5rem;
-    width: 100%;
-    font-weight: bold;
-    padding-top: 0.7rem;
-    text-align: left;
-}
-.questions p {
-    padding-top: 1.5rem;
-    text-align: left;
+/* その他のセクション */
+.other-section {
+    background-color: steelblue;
+    padding: 8rem 0 12rem 0;
+    color: white;
 }
 
-/* みんなの声について */
-.voice-container {
+.other-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    margin: 0.5rem 0;
+}
+.other-sub-title {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+}
+.other-container {
+    position: relative;
     display: flex;
-    overflow-x: auto;
     gap: 1.5rem;
-    padding: 0 2.5rem;
+    align-items: center;
+    justify-content: center;
 }
-.voice-card {
-    background-color: #ccc;
-    width: 450px;
-    height: 630px;
-    border-radius: 1rem;
-    text-align: left;
-    padding: 2rem 2.5rem;
-    flex-shrink: 0;
-}
-.voice-header {
+.others-wrapper {
+    position: relative;
+    width: 300px;
+    height: 150px;
     display: flex;
     align-items: center;
-}
-.voice-img {
-    object-fit: cover;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    margin-bottom: 1.2rem;
-}
-.voice-info {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    margin: 1.2rem;
+}
+/* .othersの後ろの影部分 */
+.others-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 150px;
+    border-radius: 1rem;
+    background: gainsboro;
+    opacity: 0.7;
+    z-index: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+.others {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 300px;
+    border-radius: 1rem;
+    background-color: white;
+    color: steelblue;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+.others:hover {
+    transform: rotate(-10deg);
+}
+
+.others-title {
+    font-size: 1.8rem;
     font-weight: bold;
-    line-height: 0.3;
+    margin: 1.5rem 0 0.5rem;
+    font-family: "Oswald", sans-serif;
 }
-.voice-text {
-    /* text-align: left; */
-    line-height: 1.8;
-    padding: 0 0.8rem;
-}
+/* その他のセクション終了 */
 
 /* ギャラリー */
 
@@ -734,33 +736,30 @@ h4.option {
 
 /* footerのCSS */
 footer {
-    background-color: rgb(230, 30, 30);
-    padding: 4rem;
+    background-color: black;
+    padding: 12rem 2rem 2rem 2rem;
+    border-radius: 1000px 1000px 0 0/ 50px 50px 0 0;
+    margin-top: -100px;
+
+    color: white;
 }
 .footer-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
     gap: 1rem;
-    padding: 2rem 0;
-    border-top: black 1px solid;
-    border-bottom: black 1px solid;
+    padding: 2rem 5rem;
+    border-top: white 1px solid;
+    border-bottom: white 1px solid;
     margin-bottom: 2rem;
 }
 .footer-logo {
     filter: grayscale(40%);
-    max-width: 180px;
+    max-width: 150px;
     height: auto;
-    border: none;
-    border-radius: 100px;
 }
-.address {
-    font-weight: bold;
-    line-height: 1.2;
-    margin-top: 2rem;
-    text-align: left;
-}
+
 .footer-menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

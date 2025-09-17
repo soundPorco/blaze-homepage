@@ -1,128 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>斜めライン＋バスケ背景</title>
-        <style>
-            body {
-                margin: 0;
-                font-family: "Noto Sans JP", sans-serif;
-                background: #0a0a0a;
-                color: white;
-                overflow: hidden;
-            }
-
-            .hero {
-                position: relative;
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                overflow: hidden;
-            }
-
-            /* 背景の斜めライン */
-            .hero::before {
-                content: "";
-                position: absolute;
-                top: -50%;
-                left: -50%;
-                width: 200%;
-                height: 200%;
-                background-image: repeating-linear-gradient(
-                    -45deg,
-                    rgba(255, 215, 0, 0.15) 0px,
-                    rgba(255, 215, 0, 0.15) 40px,
-                    transparent 40px,
-                    transparent 80px
-                );
-                animation: moveStripes 6s linear infinite;
-                z-index: 0;
-            }
-
-            @keyframes moveStripes {
-                from {
-                    background-position: 0 0;
-                }
-                to {
-                    background-position: 200px 200px;
-                }
-            }
-
-            /* バスケットボールのSVG背景 */
-            .basketball-bg {
-                position: absolute;
-                top: 10%;
-                left: -5%;
-                width: 300px;
-                height: 300px;
-                opacity: 0.07;
-                transform: rotate(-15deg);
-                z-index: 1;
-            }
-
-            /* メインコピー */
-            .hero-main {
-                font-size: 3rem;
-                font-weight: bold;
-                transform: rotate(-5deg);
-                background: rgba(0, 0, 0, 0.6);
-                border: 3px solid #ffd700;
-                padding: 1rem 2rem;
-                z-index: 2;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-            }
-
-            /* サブコピー */
-            .hero-sub {
-                margin-top: 2rem;
-                font-size: 1.8rem;
-                font-weight: 600;
-                transform: rotate(3deg);
-                color: #00c4ff;
-                background: rgba(0, 0, 0, 0.6);
-                border: 2px solid #00c4ff;
-                padding: 0.5rem 1.2rem;
-                z-index: 2;
-            }
-
-            /* 背景装飾の大文字 */
-            .hero-bg-text {
-                position: absolute;
-                bottom: 10%;
-                right: -5%;
-                font-size: 7rem;
-                font-weight: 900;
-                color: rgba(255, 255, 255, 0.05);
-                transform: rotate(-15deg);
-                white-space: nowrap;
-                user-select: none;
-                pointer-events: none;
-                z-index: 1;
-            }
-        </style>
+        <title>Document</title>
     </head>
     <body>
-        <section class="hero">
-            <!-- バスケットボールSVG（透過装飾） -->
-            <svg
-                class="basketball-bg"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 496 496"
-                fill="white"
-            >
-                <circle cx="248" cy="248" r="240" />
-                <path
-                    d="M248 8c-38.6 0-75.2 9.2-107.2 25.6C190.4 93.6 248 194.4 248 248s-57.6 154.4-107.2 214.4C172.8 478.8 209.4 488 248 488s75.2-9.2 107.2-25.6C305.6 402.4 248 301.6 248 248s57.6-154.4 107.2-214.4C323.2 17.2 286.6 8 248 8z"
-                />
-            </svg>
-
-            <div class="hero-main">『地域の育成環境をより良くする』</div>
-            <div class="hero-sub">TOKUSHIMA U15 & U12 BASKETBALL SCHOOL</div>
-            <div class="hero-bg-text">BASKETBALL</div>
-        </section>
+        <div class="container"></div>
+        <style>
+            .container {
+                height: 200px;
+                width: 200px;
+                background: black;
+                margin: 50px;
+                border-radius: 30% / 20%;
+            }
+        </style>
     </body>
 </html>
