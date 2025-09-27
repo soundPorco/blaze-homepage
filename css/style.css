@@ -6,7 +6,6 @@
 }
 html {
     scroll-behavior: smooth; /* スムーズスクロール */
-    overscroll-behavior: none; /* スクロールのバウンス無効化 */
     overflow-x: hidden;
 }
 body {
@@ -31,6 +30,16 @@ button:hover {
     filter: brightness(120%);
     transition: 0.3s;
 }
+.curved-top {
+    position: relative;
+    border-top-left-radius: 50% 40px;
+    border-top-right-radius: 50% 40px;
+}
+.curved-bottom {
+    position: relative;
+    border-bottom-left-radius: 50% 40px;
+    border-bottom-right-radius: 50% 40px;
+}
 /* aタグで飛ぶ際の位置調整用 */
 .space {
     height: 80px;
@@ -43,7 +52,7 @@ button:hover {
     font-family: "Oswald";
 }
 .section-header {
-    margin: 2rem 3rem;
+    margin: 3rem 4rem;
 }
 .heading-text {
     font-weight: bold;
@@ -79,7 +88,8 @@ button:hover {
 .description-text {
     font-size: 1rem;
     line-height: 2;
-    width: 80%;
+    width: 70%;
+    max-width: 900px;
     margin: 0 auto;
     text-align: left;
     padding: 2rem 0;
@@ -260,7 +270,7 @@ main {
 }
 .mv-title span::first-letter {
     font-size: 5rem;
-    color: rgb(0, 110, 200);
+    color: rgb(0, 100, 170);
 }
 
 .mv-theme {
@@ -282,65 +292,126 @@ main {
     z-index: -1; /* テキストの後ろに */
 }
 
-/* スライダー部分 */
-/* スライダー背景 */
-.swiperBackImg {
-    width: 100%;
-    height: 30%;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 0;
-    padding: 0;
-    margin: 1.5rem 0;
-}
-.swiper {
-    width: 90%;
-    height: 100%;
-}
-.swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
-}
-
 /* Aboutセクション */
 .about-section {
     background-color: whitesmoke;
     padding: 2rem 0;
-    border-radius: 0 0 1000px 1000px / 0 0 50px 50px;
-    position: relative;
     z-index: 2;
-    padding-bottom: 200px;
     margin-bottom: -200px;
 }
-.about-container {
-    max-width: 90%;
-    display: flex;
-    flex-direction: row;
-    align-items: center; /* 縦軸の中央揃え */
-    margin-bottom: 3rem;
-    margin: 1rem auto;
+/* aboutのセクションヘッダー部分 */
+.about-headers {
+    margin: 0 4rem;
+    text-align: left;
 }
-.about-portrait {
-    width: 100%; /* 修正: 画面幅に合わせて調整 */
-    width: 600px;
-    max-height: 500px;
+.about-header {
+    color: rgb(0, 100, 170);
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
+    text-align: left;
+}
+.about-sub-header {
+    color: rgb(0, 100, 170);
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: left;
+}
+/* aboutの共通設定 */
+.about-section img {
     object-fit: cover;
-    border-radius: 1rem;
 }
-.about-section .text {
-    color: #fff;
-    margin: 0.5rem 1.5rem;
-    padding: 2rem;
-    background-color: rgba(128, 128, 128);
-    border-radius: 1rem;
+.about-text {
+    margin: 0 auto;
+    padding: 3% 5%;
+    text-align: left;
+    border-bottom: rgb(0, 100, 170) 1px solid;
 }
-.about-section h2 {
-    font-size: 3rem;
+.about-caption {
+    font-size: 1.5rem;
+    margin: 0.2rem 0 1rem;
+    text-align: left;
 }
-.about-section p {
+.about-role {
+    color: gray;
     font-size: 1.2rem;
+}
+.about-description {
+    text-align: left;
+    line-height: 1.7;
+}
+
+/* container1について */
+.about-container1,
+.about-container2,
+.about-container3 {
+    margin: 0 auto;
+    padding: 8% 0;
+    display: flex;
+    gap: 1%;
+    align-items: center;
+}
+
+.about-portrait1 {
+    width: 55%;
+    object-position: bottom;
+}
+/* container2について */
+.about-portrait2 {
+    width: 55%;
+    border-radius: 0 2rem 2rem 0;
+}
+
+/* container3について */
+.about-portrait3 {
+    width: 45%;
+    border-radius: 2rem 0 0 2rem;
+}
+.about-name3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.2rem 0 1rem 0;
+}
+
+/* container4について */
+.about-text4 {
+    margin: 0 auto;
+    padding: 3% 5%;
+    text-align: left;
+    width: 70%;
+}
+/* container5について */
+.about-container5 {
+    background: rgb(0, 100, 170);
+    position: relative;
+    z-index: 3;
+    padding: 2rem 0 5rem;
+}
+.about-caption5 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 600px;
+    margin: 0.5rem auto;
+    text-align: center;
+}
+.about-caption5 strong {
+    color: gold;
+    font-size: 1.3rem;
+    margin: 0 0.1rem;
+}
+.about-instagram {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: rgb(0, 100, 170);
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 3rem;
+    text-decoration: none;
+}
+.about-instagram:hover {
+    filter: brightness(120%);
+    transition: 0.3s;
 }
 
 /* 施設紹介ページ */
@@ -348,12 +419,68 @@ main {
     background-color: black;
     padding: 2rem 0;
     color: white;
-    padding-top: 200px;
+    padding: 200px 0;
 }
+/* laboのセクションヘッダー部分 */
+.labo-headers {
+    margin: 0 auto;
+    text-align: center;
+}
+.labo-header {
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 5rem;
+    text-align: center;
+}
+.labo-sub-header {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* outlineのセクションヘッダー部分 */
+.outline-header {
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+}
+.outline-sub-header {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+.outline-headers {
+    margin-bottom: 2rem;
+}
+.labo-text {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    border: 0;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: whitesmoke;
+    color: black;
+}
+.labo-text ul {
+    font-size: 1.1rem;
+    line-height: 2rem;
+    text-align: left;
+    padding-left: 1.5em;
+    margin: 1em 0;
+    list-style-type: disc;
+    font-weight: 600;
+    color: #222;
+}
+
 .labo-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, 300px);
+    grid-template-rows: repeat(6, 300px);
     gap: 1.5rem;
     max-width: 80%;
     margin: 0 auto;
@@ -378,20 +505,7 @@ main {
     grid-column: 1/2;
     grid-row: 3/4;
 }
-.labo-text {
-    grid-column: 2/3;
-    grid-row: 2/4;
-    border: 0;
-    border-radius: 1rem;
-    padding: 2rem;
-    background-color: whitesmoke;
-    color: black;
-}
-.labo-text ul {
-    font-size: 1.1rem;
-    line-height: 2rem;
-    text-align: left;
-}
+
 /* マップのやつ */
 .map {
     grid-column: 1/3;
@@ -399,11 +513,16 @@ main {
     border: 0;
     border-radius: 1rem;
     padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: whitesmoke;
     color: black;
+}
+.map-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0 1rem 0;
+}
+.map-description {
+    margin-bottom: 1rem;
 }
 .map-frame {
     height: 80%;
@@ -411,23 +530,83 @@ main {
     border: solid #ccc 1px;
     border-radius: 1rem;
 }
+.labo-button {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+}
 
 /* クラス紹介 */
 
 .class-section {
     background-color: white;
-    padding: 2rem 0 8rem;
-    border-radius: 1000px 1000px 0 0/ 50px 50px 0 0;
-    margin-top: -100px;
+    padding: 0 0 8rem;
+}
+/* クラス冒頭の三角について */
+.class-introduction {
+    background-color: rgb(0, 100, 170);
+    color: white;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.custom-shape-divider-bottom-1758721647 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1758721647 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+}
+
+.custom-shape-divider-bottom-1758721647 .shape-fill {
+    fill: #ffffff;
+}
+
+/* 三角について終了 */
+
+/* classのセクションヘッダー部分 */
+.class-header {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+.class-sub-header {
+    color: gold;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.class-main {
+    padding: 5rem 2rem 0;
 }
 
 /* アコーディオンタイプのcss */
 
+.accordion-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .accordion-box {
-    max-width: 90%;
-    text-align: center;
-    margin: 0 auto;
     margin-bottom: 2rem;
+    max-width: 1000px;
 }
 .accordion-front {
     display: flex;
@@ -438,8 +617,8 @@ main {
 
 .accordion-box img {
     flex-shrink: 0;
-    height: 220px;
-    width: 350px;
+    height: 280px;
+    width: 450px;
     object-fit: cover;
     border-radius: 1rem;
 }
@@ -452,6 +631,7 @@ main {
     max-width: 90%;
     overflow: visible;
     margin: 0 auto;
+    padding: 1rem 2rem;
 }
 .accordion-content p {
     text-align: left;
@@ -472,8 +652,6 @@ h4.option {
     font-size: 1.5rem;
     font-weight: bold;
     font-family: "Oswald";
-    margin: 0;
-    padding: 0;
     line-height: 0.3;
 }
 .accordion-header p {
@@ -483,6 +661,7 @@ h4.option {
     background-color: royalblue;
     color: white;
     border: none;
+    margin-top: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 3rem;
 }
@@ -493,7 +672,7 @@ h4.option {
     border: none;
     width: 600px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 .recomend-title {
     font-size: 1.3rem;
@@ -510,17 +689,17 @@ h4.option {
 
 /* 今後開設予定のクラスについて */
 .upcoming {
-    text-align: left;
+    text-align: center;
     margin-top: 5rem;
 }
 .upcoming h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
     font-weight: bold;
-    text-align: center;
 }
 .upcoming ul {
     line-height: 1.5;
+    list-style: none;
 }
 
 .note {
@@ -528,35 +707,52 @@ h4.option {
     color: red;
     text-align: center;
 }
-/* 練習時間について */
+/* クラス紹介終了 */
 
-.time-section {
-    background-color: white;
-    padding: 2rem 0;
-}
-.time-container {
-    margin: 0;
-    padding: 2rem 4rem;
-    text-align: left;
+/* .time&tuition-sectionについて  */
+.time-tuition-section {
+    background-image: url("../images/logo-back-img.png");
+    background-size: cover;
     background-color: black;
-    color: white;
-    width: 80%;
-    border-radius: 0 3rem 3rem 0;
-    position: relative;
+    color: black;
 }
-.time-logo {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    height: 1000px;
-    width: auto;
-    opacity: 0.15;
-    z-index: 0;
-    pointer-events: none;
+.tuition-header,
+.time-header {
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    margin-top: 2rem;
+}
+.time-sub-header,
+.tuition-sub-header {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 0.2rem;
+    color: red;
+}
+.time-tuition-section strong {
+    color: red;
+    font-size: 1.3rem;
+    margin: 0 0.1rem;
 }
 
-.time-section ul {
+/* 練習時間について */
+.time-container {
+    padding: 8rem 0 5rem;
+    position: relative;
+    z-index: 2;
+}
+.time-main,
+.tuition-main {
+    background-color: white;
+    border-radius: 3rem;
+    margin: 2rem 5rem;
+    padding: 3rem 0;
+}
+.time-list {
     list-style: none;
     font-weight: bolder;
     font-size: 1.6rem;
@@ -564,148 +760,114 @@ h4.option {
 }
 
 /* 月会費、諸費用について */
-.tuition-section {
-    background-color: white;
-    padding: 2rem 0;
-}
-
 .tuition-container {
+    padding: 5rem 0 8rem;
+}
+.tuition-flex {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5%;
+    margin-top: 3rem;
     position: relative;
-    /* 既存のスタイルはそのまま */
+    z-index: 2;
 }
-
-.tuition-logo {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    height: 1000px;
-    width: auto;
-
-    opacity: 0.15;
-    z-index: 0;
-    pointer-events: none;
+.tuition-details {
+    margin-left: 30%;
 }
-.tuition-container {
-    margin: 0;
-    padding: 2rem 4rem;
-    text-align: left;
-    background-color: black;
-    color: white;
-    width: 80%;
-    margin-left: auto;
-    border-radius: 3rem 0 0 3rem;
-}
-.tuition-title {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-.tuition-section ul {
+.tuition-list {
     list-style: number;
     line-height: 1.8;
+    text-align: left;
 }
 .attention {
     font-size: 0.8rem;
     color: red;
     font-weight: 800;
-    width: 90%;
+    margin-left: 20%;
+    margin-top: 1rem;
 }
 
 /* その他のセクション */
 .other-section {
-    background-color: gainsboro;
-    padding: 8rem 0 12rem 0;
+    background-color: white;
+    padding: 8rem 5rem 15rem;
     color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
 }
 
-.other-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    font-family: "Oswald", sans-serif;
-    margin: 0.5rem 0;
-}
-.other-sub-title {
-    text-align: center;
-    font-size: 1rem;
-    letter-spacing: 0.2rem;
+/* newsについて */
+.news-headers {
+    text-align: left;
     margin-bottom: 3rem;
 }
-.other-container {
-    position: relative;
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    justify-content: center;
+.news-header {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
 }
-.others-wrapper {
-    position: relative;
-    width: 300px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
+.news-sub-header {
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.2rem;
 }
-/* .othersの後ろの影部分 */
-.others-shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 130px;
-    border-radius: 1rem;
-    background: gray;
-    opacity: 0.7;
-    z-index: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
+.news-wrapper {
+    padding: 0.7rem 0;
 }
-/* .basketball-icon {
-    position: absolute;
-    overflow: hidden;
-    top: -20px;
-    left: -20px;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-    pointer-events: none;
-} */
-.others {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 130px;
-    width: 300px;
-    border-radius: 1rem;
-    background-color: white;
-    color: black;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease;
-    transform-origin: top right; /* 最初から固定 */
-    z-index: 1;
+.news-date {
+    font-size: 0.8rem;
+    color: gray;
+    margin-bottom: 0.2rem;
 }
-.others:hover {
-    transform: rotate(-10deg);
-    transform-origin: top right; /* 回転の基準点を右上に */
-}
-
-.others-title {
-    font-size: 1.8rem;
+.news-title {
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    font-family: "Oswald", sans-serif;
+    padding-bottom: 0.5rem;
+    border-bottom: #ccc 3px solid;
 }
+.news-text {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+/* newsについて終了 */
+.left-side {
+    width: 180px;
+}
+
+.others-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+}
+.others {
+    /* border: #ccc 1.5px solid; */
+    background-color: #444;
+    padding: 0.8rem 1rem;
+    border-radius: 3rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+}
+.others:hover {
+    background-color: rgb(0, 100, 170);
+    color: white;
+    transition: all 0.3s ease;
+}
+
 /* その他のセクション終了 */
 
 /* footerのCSS */
 .footer-container {
-    border-radius: 1000px 1000px 0 0/ 20px 20px 0 0;
     padding: 3rem 5rem 2rem;
     color: white;
     margin-top: -100px;
