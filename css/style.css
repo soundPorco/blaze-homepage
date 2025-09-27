@@ -711,7 +711,7 @@ h4.option {
 
 /* .time&tuition-sectionについて  */
 .time-tuition-section {
-    background-image: url("/images/logo-back-img.png");
+    background-image: url("../images/logo-back-img.png");
     background-size: cover;
     background-color: black;
     color: black;
