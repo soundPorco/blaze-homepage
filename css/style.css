@@ -230,7 +230,7 @@ main {
     padding: 30px 60px;
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)),
-        url("/images/img13.png");
+        url("../images/img13.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
