@@ -35,13 +35,8 @@
     <body>
         <header class="navbar">
             <!-- ナビバー -->
-
-            <!-- <img src="images/logo.png" class="navbar-logo" alt="logo" /> -->
-            <div class="navbar-title Oswald">
-                BLAZE<br />
-                BASKETBALL<br />
-                SCHOOL
-            </div>
+            <!-- ロゴ画像 -->
+            <img src="images/png_logo.png" alt="ロゴ画像" class="navbar-logo" />
 
             <!-- ハンバーガーボタン -->
             <div class="hamburger" id="hamburger">
@@ -54,31 +49,37 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li>
-                        <a href="#"
+                        <a href="#mv-space" class="nav-btn"
                             ><span class="material-symbols-outlined">
                                 home </span
-                            >HOME</a
+                            >TOP</a
                         >
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="#about-space" class="nav-btn"
                             ><span class="material-symbols-outlined">
                                 article </span
                             >ABOUT</a
                         >
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="#place-space" class="nav-btn"
                             ><span class="material-symbols-outlined">
                                 location_on </span
-                            >MAP</a
+                            >PLACE</a
                         >
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="#class-space" class="nav-btn"
                             ><span class="material-symbols-outlined">
-                                perm_media </span
-                            >GALLERY</a
+                                category</span
+                            >CLASS</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#info-space" class="nav-btn"
+                            ><span class="material-symbols-outlined"> info</span
+                            >INFO</a
                         >
                     </li>
                 </ul>
@@ -87,7 +88,7 @@
         <!-- ナビバー終了 -->
 
         <!-- 参加するボタン -->
-        <button class="fixed-button shadow">
+        <button class="fixed-button">
             <a href="#">
                 <div>
                     <h3>JOIN US</h3>
@@ -97,7 +98,7 @@
             </a>
         </button>
         <!-- ナビバー終了 -->
-        <div class="mvSpace"></div>
+        <div id="mv-space"></div>
         <!-- メインビジュアル -->
 
         <main>
@@ -130,7 +131,7 @@
             <!-- ABOUTゾーン -->
             <!-- about us(セールスポイントなど) -->
             <section class="about-section">
-                <div class="space" id="about"></div>
+                <div class="space" id="about-space"></div>
                 <div class="about-headers">
                     <h2 class="about-header">ABOUT US</h2>
                     <p class="about-sub-header">活動について</p>
@@ -168,6 +169,11 @@
                             <br />
                             「個のスキル」を学ぶ
                         </h2>
+                        <img
+                            src="images/img1.png"
+                            alt="画像"
+                            class="in-about-portrait2"
+                        />
                         <p class="about-description">
                             BLAZE
                             では、JBAの育成理論とNBAスキルコーチの「スキル構築」理論を融合させ、試合で本当に活かせる技術を習得します。
@@ -183,7 +189,6 @@
                         <p class="about-name3">水上 陵</p>
                         <div class="about-description">
                             <p class="about-history">
-                                徳島県徳島市出身。<br />
                                 徳島中学校在学時には県大会優勝・ブロック大会出場を経験し、その後徳島商業高等学校を卒業。JBA公認C級ライセンスを取得し、21歳から現在まで14年間にわたり小中学生を中心に指導。中学強豪クラブチーム『VERTEX』のスキルコーチを務めるほか、徳島の優秀選手、並びに強豪クラブや徳島ガンバロウズユースの選手も通うスクールを運営。<br />2022年にBLAZE
                                 BASKETBALL
                                 SCHOOLを設立。以来、延べ1,000人以上を指導し、U16日本代表やプロユースアカデミーへ進む選手も輩出。
@@ -227,7 +232,7 @@
             </section>
             <!-- 施設の紹介 -->
             <section class="labo-section">
-                <div class="space" id=""></div>
+                <div class="space" id="place-space"></div>
                 <div class="labo-headers">
                     <p class="labo-sub-header">県内初のスクール専用施設</p>
                     <h2 class="labo-header">SKILLIMPROVE LABO</h2>
@@ -314,7 +319,7 @@
 
             <section class="class-section">
                 <div class="class-introduction">
-                    <div class="space" id="class"></div>
+                    <div class="space" id="class-space"></div>
                     <div class="class-headers">
                         <h2 class="class-header">CLASS INTRODUCTION</h2>
                         <p class="class-sub-header">
@@ -539,6 +544,7 @@
             <!-- 練習時間・月会費について -->
 
             <section class="time-tuition-section">
+                <div class="space" id="info-space"></div>
                 <div class="time-container">
                     <div class="time-main">
                         <div class="time-headers">
@@ -666,46 +672,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="other-container">
-                    <p class="other-header">その他の情報</p>
-                    <div class="others-wrapper">
-                        <a href="questions.html">
-                            <div class="others-shadow"></div>
-                            <div class="others">
-                                <div class="others-text">
-                                    <h3 class="others-title">QUESTIONS</h3>
-                                    <p class="others-sub-title">
-                                        よくある質問と回答
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="others-wrapper">
-                        <a href="voices.html">
-                            <div class="others-shadow"></div>
-                            <div class="others">
-                                <div class="others-text">
-                                    <h3 class="others-title">VOICES</h3>
-                                    <p class="others-sub-title">みんなの声</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="others-wrapper">
-                        <a href="gallery.html">
-                            <div class="others-shadow"></div>
-                            <div class="others">
-                                <div class="others-text">
-                                    <h3 class="others-title">GALLERY</h3>
-                                    <p class="others-sub-title">ギャラリー</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>-->
             </div>
 
             <!-- 問い合わせ -->
