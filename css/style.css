@@ -328,18 +328,18 @@ main {
     padding: 3% 5%;
     width: clamp(0, 60%, 900px);
 }
-.about-message {
-    font-size: 1.5rem;
-    margin: 0.2rem 0 1rem;
-    text-align: left;
-    white-space: nowrap;
-}
 /* container5について */
 .about-container5 {
     background: rgb(0, 100, 170);
     position: relative;
     z-index: 3;
     padding: 2rem 0 5rem;
+}
+.about-message {
+    font-size: 1.5rem;
+    margin: 0.2rem 0 1rem;
+    text-align: left;
+    white-space: nowrap;
 }
 .about-caption5 {
     color: white;
@@ -1011,12 +1011,15 @@ h4.option {
         text-align: left;
     }
     .about-caption5 {
-        white-space: normal;
+        white-space: nowrap;
     }
     .about-message {
         /* width: 80vw; */
         text-align: center;
         font-size: 1.2rem;
+    }
+    .sp-only {
+        display: block;
     }
 
     /* ラボ紹介セクションについて */
