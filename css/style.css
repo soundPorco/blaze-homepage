@@ -43,7 +43,7 @@ button:hover {
 .description-text {
     font-size: 1rem;
     line-height: 2;
-    width: clamp(500px, 70%, 1000px);
+    width: clamp(300px, 70%, 1000px);
     margin: 0 auto;
     text-align: left;
     padding: 2rem 0;
@@ -347,6 +347,7 @@ main {
     font-weight: bold;
     margin: 0.5rem auto;
     text-align: center;
+    white-space: nowrap;
 }
 .about-caption5 strong {
     color: gold;
@@ -449,8 +450,8 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 20rem);
-    gap: 1.5rem;
-    width: clamp(600px, 90%, 1300px);
+    gap: 1rem;
+    width: clamp(300px, 90%, 1300px);
     margin: 0 auto;
 }
 .labo-container img {
@@ -492,6 +493,7 @@ main {
 }
 .map-description {
     margin-bottom: 1rem;
+    text-align: left;
 }
 .map-frame {
     height: 75%;
@@ -561,7 +563,6 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
 .accordion-box {
     margin-bottom: 2rem;
     max-width: 1000px;
@@ -572,7 +573,9 @@ main {
     text-align: left;
     gap: 1.5rem;
 }
-
+.about-front-text {
+    text-align: left;
+}
 .accordion-box img {
     flex-shrink: 0;
     aspect-ratio: 4/3;
@@ -1015,9 +1018,12 @@ h4.option {
 
     /* ラボ紹介セクションについて */
     /* gridの組み替え部分 */
+    .labo-header {
+        font-size: 2.5rem;
+    }
     .labo-container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(8, 200px);
+        grid-template-rows: repeat(10, 130px);
     }
     .labo-main-img {
         grid-column: 1/2;
@@ -1033,18 +1039,23 @@ h4.option {
     }
     .labo-text {
         grid-column: 1/3;
-        grid-row: 3/5;
+        grid-row: 3/6;
         padding: 2rem;
     }
     .map {
         grid-column: 1/3;
-        grid-row: 5/8;
+        grid-row: 6/10;
     }
     /* gridの組み替え部分終了 */
 
-    .labo-container {
-        grid-template-rows: repeat(6, 130px);
-        /* gap: 0.8rem; */
+    .outline-headers {
+        margin-bottom: 1rem;
+    }
+    .outline-header {
+        font-size: 2rem;
+    }
+    .outline-sub-header {
+        font-size: 1rem;
     }
 
     .labo-text {
@@ -1052,12 +1063,42 @@ h4.option {
     }
     .labo-text ul {
         line-height: 1.3;
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+    .labo-text ul li {
+        margin-bottom: 0.3rem;
     }
     .map {
         padding: 1.5rem;
     }
     .map-frame {
-        width: 100%;
+        height: 60%;
+    }
+    .map-description {
+        font-size: 0.9rem;
+    }
+
+    /* laboセクションについて終了 */
+    /* classセクションについて */
+    .class-header {
+        font-size: 2.5rem;
+    }
+    .accordion-front {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .accordion-header {
+        text-align: center;
+    }
+    .accordion-front-text {
+        width: clamp(0px, 90vw, 400px);
+        margin: 0 auto;
+        text-align: left;
+    }
+    .upcoming ul {
+        font-size: 0.8rem;
+        list-style: none;
     }
 }
