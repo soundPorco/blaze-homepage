@@ -713,7 +713,7 @@ h4.option {
 .tuition-main {
     background-color: white;
     border-radius: 3rem;
-    width: clamp(400px, 90%, 1200px);
+    width: clamp(100px, 90%, 1200px);
     margin: 2rem auto;
     padding: 3rem 2rem;
 }
@@ -1109,5 +1109,13 @@ h4.option {
     .upcoming ul {
         font-size: 0.8rem;
         list-style: none;
+    }
+
+    .tuition-flex {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .attention {
+        margin-left: 0;
     }
 }
