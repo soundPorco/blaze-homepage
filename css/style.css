@@ -517,6 +517,7 @@ main {
     color: white;
     padding-bottom: 120px;
     position: relative;
+    border: none;
 }
 
 .custom-shape-divider-bottom-1758721647 {
@@ -556,6 +557,7 @@ main {
 }
 .class-main {
     padding: 5rem 2rem 0;
+    border: none;
 }
 
 /* アコーディオンタイプのcss */
@@ -1068,7 +1070,7 @@ h4.option {
     }
 
     .labo-text {
-        padding: 2rem 0.8rem 1rem 0.5rem;
+        padding: 2rem 0.8rem 1rem 2rem;
     }
     .labo-text ul {
         line-height: 1.3;
