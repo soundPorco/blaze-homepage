@@ -1032,7 +1032,7 @@ h4.option {
     }
     .labo-container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(10, 130px);
+        grid-template-rows: repeat(9, 130px);
     }
     .labo-main-img {
         grid-column: 1/2;
