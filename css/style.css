@@ -368,6 +368,9 @@ main {
     filter: brightness(120%);
     transition: 0.3s;
 }
+.sp-only {
+    display: none;
+}
 
 /* 施設紹介ページ */
 .labo-section {
