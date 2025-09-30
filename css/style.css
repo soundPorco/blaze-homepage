@@ -1010,6 +1010,9 @@ h4.option {
         width: 80vw;
         text-align: left;
     }
+    .about-caption5 {
+        white-space: normal;
+    }
     .about-message {
         /* width: 80vw; */
         text-align: center;
@@ -1063,7 +1066,7 @@ h4.option {
     }
     .labo-text ul {
         line-height: 1.3;
-        font-size: 0.9rem;
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
     }
     .labo-text ul li {
         margin-bottom: 0.3rem;
@@ -1093,7 +1096,7 @@ h4.option {
         text-align: center;
     }
     .accordion-front-text {
-        width: clamp(0px, 90vw, 400px);
+        width: clamp(0px, 90vw, 600px);
         margin: 0 auto;
         text-align: left;
     }
