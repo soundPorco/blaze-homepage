@@ -597,7 +597,7 @@ main {
     max-width: 90%;
     overflow: visible;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
 }
 .accordion-content p {
     text-align: left;
@@ -781,7 +781,6 @@ h4.option {
     color: rgb(0, 100, 170);
     font-weight: bold;
     font-size: 1rem;
-    margin-bottom: 2rem;
     letter-spacing: 0.2rem;
 }
 .news-wrapper {
@@ -1105,8 +1104,9 @@ h4.option {
     }
     .accordion-front-text {
         width: clamp(0px, 90vw, 600px);
-        margin: 0 auto;
-        text-align: left;
+    }
+    .recomend {
+        width: 80vw;
     }
     .upcoming ul {
         font-size: 0.8rem;
@@ -1119,5 +1119,25 @@ h4.option {
     }
     .attention {
         margin-left: 0;
+    }
+
+    /* otherセクションについて */
+    .other-section {
+        flex-direction: column;
+        justify-content: baseline;
+        padding: 5rem 2rem 15rem;
+        gap: 1rem;
+    }
+    .left-side {
+        width: 90vw;
+    }
+    .news-headers {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .others-container {
+        flex-direction: row;
+        gap: 2px;
     }
 }
