@@ -1135,9 +1135,30 @@ h4.option {
         text-align: center;
         margin-bottom: 1rem;
     }
+    .news-header {
+        margin: 0 auto;
+    }
+    .news-sub-header {
+        margin: 0 auto 1rem;
+    }
 
     .others-container {
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         gap: 2px;
+    }
+
+    /* フッターについて */
+    .footer-menu-container {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    .footer-menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
     }
 }
