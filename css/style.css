@@ -92,17 +92,17 @@ main {
 .nav-menu ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 .nav-menu .nav-btn {
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
     color: white;
     text-decoration: none;
     font-family: "Oswald";
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border: none;
     border-radius: 3rem;
     object-fit: fill;
@@ -182,6 +182,7 @@ main {
     object-fit: contain;
     opacity: 0;
     transition: opacity 2s ease-in-out;
+    filter: brightness(60%);
 }
 
 .slide.active {
@@ -911,8 +912,8 @@ h4.option {
 .footer-menu {
     font-family: "Oswald", sans-serif;
     display: flex;
-    gap: 3rem;
-    font-size: 1.2rem;
+    gap: 2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 

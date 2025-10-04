@@ -59,17 +59,17 @@ button:hover {
 .nav-menu ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 .nav-menu .nav-btn {
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
     color: white;
     text-decoration: none;
     font-family: "Oswald";
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border: none;
     border-radius: 3rem;
     object-fit: fill;
@@ -140,7 +140,7 @@ button:hover {
 }
 .voice-title {
     text-align: center;
-    margin: 2rem auto;
+    margin: 2rem auto 5rem;
     font-weight: bold;
 }
 .heading-text {
@@ -191,6 +191,13 @@ button:hover {
     font-size: 0.9rem;
     margin-top: 1rem;
 }
+.voice-text strong {
+    font-weight: bold;
+    font-size: larger;
+    /* 改行する */
+    display: block;
+    margin: 0.5rem 0;
+}
 
 /* footerのCSS */
 .footer-container {
@@ -230,8 +237,8 @@ button:hover {
 .footer-menu {
     font-family: "Oswald", sans-serif;
     display: flex;
-    gap: 3rem;
-    font-size: 1.2rem;
+    gap: 2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
