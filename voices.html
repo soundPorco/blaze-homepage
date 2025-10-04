@@ -3,30 +3,108 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- googleアイコン -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        />
+        <!-- googleFontsの高速化用preconect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- googleFonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dela+Gothic+One&family=Oswald:wght@200..700&family=Sigmar&display=swap"
+            rel="stylesheet"
+        />
+        <!-- reset.css ress -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+
         <!-- style.cssの読み込み -->
         <link rel="stylesheet" href="css/voices.css" />
         <title>BLAZE_voices</title>
     </head>
     <body>
+        <header class="navbar">
+            <!-- ナビバー -->
+            <!-- ロゴ画像 -->
+            <img src="images/png_logo.png" alt="ロゴ画像" class="navbar-logo" />
+
+            <!-- ハンバーガーボタン -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- ナビゲーションメニュー -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li>
+                        <a href="#mv-space" class="nav-btn"
+                            ><span class="material-symbols-outlined">
+                                home </span
+                            >TOP</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#about-space" class="nav-btn"
+                            ><span class="material-symbols-outlined">
+                                article </span
+                            >ABOUT</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#place-space" class="nav-btn"
+                            ><span class="material-symbols-outlined">
+                                location_on </span
+                            >PLACE</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#class-space" class="nav-btn"
+                            ><span class="material-symbols-outlined">
+                                category</span
+                            >CLASS</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#info-space" class="nav-btn"
+                            ><span class="material-symbols-outlined"> info</span
+                            >INFO</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <!-- 参加するボタン -->
+            <button class="fixed-button">
+                <a href="#">
+                    <div>
+                        <h3>JOIN US</h3>
+                        <p>参加する</p>
+                    </div>
+                    <span class="material-symbols-outlined"> arrow_right </span>
+                </a>
+            </button>
+        </header>
+
+        <div class="mvSpace"></div>
+
+        <!-- みんなの声セクション -->
         <section class="voice-section">
-            <div class="voice-title" style="margin-left: 1rem">
-                <h3 class="heading-text medium">VOICES</h3>
-                <p class="sub-heading-text sub-medium">スクール生徒の声</p>
+            <div class="voice-title">
+                <h3 class="heading-text">VOICES</h3>
+                <p class="sub-heading-text">スクール生徒の声</p>
             </div>
             <!-- 1人目 -->
             <div class="voice-container">
                 <div class="voice-card">
                     <div class="voice-header">
-                        <img
-                            src="images/demo1.jpg"
-                            class="voice-img"
-                            alt="User 1"
-                        />
-                        <div class="voice-info">
-                            <p class="voice-name">S・K（男性・10歳）</p>
-                            <p class="voice-details">BASICクラス・本人</p>
-                            <p class="voice-period">在籍期間：10ヶ月</p>
-                        </div>
+                        <p class="voice-name">S・K（男性・10歳）</p>
+                        <p class="voice-details">BASICクラス・本人</p>
+                        <p class="voice-period">在籍期間：10ヶ月</p>
                     </div>
                     <p class="voice-text">
                         BLAZEに通ってから、友達がたくさんできました。練習ではドリブルやシュートをくり返し練習して、少しずつできることが増えてきました。できなかったことができるようになると、とても嬉しいです。友達と声をかけ合いながら練習すると、もっと楽しくなります。<br />
@@ -36,16 +114,9 @@
                 <!-- 2人目 -->
                 <div class="voice-card">
                     <div class="voice-header">
-                        <img
-                            src="images/demo2.jpg"
-                            class="voice-img"
-                            alt="User 2"
-                        />
-                        <div class="voice-info">
-                            <p class="voice-name">S・K（男性・10歳）</p>
-                            <p class="voice-details">BASICクラス・保護者</p>
-                            <p class="voice-period">在籍期間：10ヶ月</p>
-                        </div>
+                        <p class="voice-name">S・K（男性・10歳）</p>
+                        <p class="voice-details">BASICクラス・保護者</p>
+                        <p class="voice-period">在籍期間：10ヶ月</p>
                     </div>
                     <p class="voice-text">
                         子どもがBLAZEに通い始めてから、毎回の練習を心から楽しみにしています。コーチの熱心で丁寧なご指導のおかげで、自信がつき、シュートやドリブルの技術も着実に向上しています。笑顔が増え、仲間ともすっかり打ち解けて、見ているこちらまで嬉しくなります。<br />
@@ -55,16 +126,9 @@
                 <!-- 3人目 -->
                 <div class="voice-card">
                     <div class="voice-header">
-                        <img
-                            src="images/demo3.jpg"
-                            class="voice-img"
-                            alt="User 3"
-                        />
-                        <div class="voice-info">
-                            <p class="voice-name">ICH（男性・9歳）</p>
-                            <p class="voice-details">BASIC・保護者</p>
-                            <p class="voice-period">在籍期間：5ヶ月</p>
-                        </div>
+                        <p class="voice-name">ICH（男性・9歳）</p>
+                        <p class="voice-details">BASIC・保護者</p>
+                        <p class="voice-period">在籍期間：5ヶ月</p>
                     </div>
                     <p class="voice-text">
                         基礎をしっかり学んで欲しいという目的で参加しました。
@@ -74,18 +138,12 @@
                         他チームに所属している子供達と交われるのも、刺激的で良いなと感じます。何より本人が楽しめていることが一番です。
                     </p>
                 </div>
+                <!-- 4人目 -->
                 <div class="voice-card">
                     <div class="voice-header">
-                        <img
-                            src="images/demo3.jpg"
-                            class="voice-img"
-                            alt="User 3"
-                        />
-                        <div class="voice-info">
-                            <p class="voice-name">K・S（男性・9歳）</p>
-                            <p class="voice-details">BASIC・保護者</p>
-                            <p class="voice-period">在籍期間：6ヶ月</p>
-                        </div>
+                        <p class="voice-name">K・S（男性・9歳）</p>
+                        <p class="voice-details">BASIC・保護者</p>
+                        <p class="voice-period">在籍期間：6ヶ月</p>
                     </div>
                     <p class="voice-text">
                         2年生から地元のミニバスチームに所属しています。もっと勝てるようになりたい、もっと上手くなりたいとの本人の思いがあり、BLAZEに通い始めました。
@@ -96,18 +154,12 @@
                         北沖洲のLABOは、秘密基地のような雰囲気があり、子供が好きな感じだなと思います。
                     </p>
                 </div>
+                <!-- 5人目 -->
                 <div class="voice-card">
                     <div class="voice-header">
-                        <img
-                            src="images/demo3.jpg"
-                            class="voice-img"
-                            alt="User 3"
-                        />
-                        <div class="voice-info">
-                            <p class="voice-name">A・I（女性・10歳）</p>
-                            <p class="voice-details">BASIC・保護者</p>
-                            <p class="voice-period">在籍期間：11ヶ月</p>
-                        </div>
+                        <p class="voice-name">A・I（女性・10歳）</p>
+                        <p class="voice-details">BASIC・保護者</p>
+                        <p class="voice-period">在籍期間：11ヶ月</p>
                     </div>
                     <p class="voice-text">
                         知人からの誘いで、体験参加し終わって早々に『ここでバスケがしたい』と本人の強い要望があり、入会させていただきました。
@@ -117,7 +169,91 @@
                         娘が夢中になって取り組める環境をいただけたこと感謝しています。
                     </p>
                 </div>
+                <!-- 6人目 -->
+                <div class="voice-card">
+                    <div class="voice-header">
+                        <p class="voice-name">K・N（男性・14歳）</p>
+                        <p class="voice-details">ADVANCED・保護者</p>
+                        <p class="voice-period">在籍期間：1年4ヶ月</p>
+                    </div>
+                    <p class="voice-text">
+                        バスケ歴5年目の中学生です。<br />
+                        コーチには初心者の頃からお世話になっており、人柄はもちろん熱心なご指導にいつも感謝しています。
+                        異年齢、他チーム所属のスクール生との関わりや対戦も１つの楽しみで練習日を楽しみに通っています。
+                        チーム練習や塾など、なかなか時間を作るのが難しいですが、希望の曜日が選べるのも魅力の１つです。
+                        BLAZEで学んだ事を試合で実行出来た時は、とても喜んでいました。
+                        これからも沢山学び、スキルを上げていって欲しいと思います。
+                    </p>
+                </div>
             </div>
         </section>
+
+        <!-- フッター画面 -->
+        <footer>
+            <div class="footer-container curved-top">
+                <div class="footer-logo">
+                    <h3>BLAZE</h3>
+                    <p>BASKETBALL SCHOOL</p>
+                </div>
+                <div class="footer-menu-container">
+                    <div class="footer-menu">
+                        <a href="#top"
+                            ><span class="material-symbols-outlined">
+                                arrow_right </span
+                            >TOP</a
+                        >
+                        <a href="#about"
+                            ><span class="material-symbols-outlined">
+                                arrow_right </span
+                            >ABOUT</a
+                        >
+                        <a href="#map"
+                            ><span class="material-symbols-outlined">
+                                arrow_right </span
+                            >PLACE</a
+                        >
+                        <a href="#gallery"
+                            ><span class="material-symbols-outlined">
+                                arrow_right </span
+                            >CLASS</a
+                        >
+                        <a href="#contact"
+                            ><span class="material-symbols-outlined">
+                                arrow_right </span
+                            >INFO</a
+                        >
+                    </div>
+                    <a
+                        href="https://www.instagram.com/blaze_baskeschool?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="sns-icon-link"
+                    >
+                        <svg
+                            class="sns-icon"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 141.73 141.73"
+                        >
+                            <path
+                                class="cls-1"
+                                d="M46.19.45c16.36-.65,34.87-.63,51.17.24,27.98,1.49,41.65,13.34,43.52,41.99,1.12,17.29,1.16,39.39.02,56.68-1.97,29.94-17.66,40.95-46.28,41.98-15.04.54-32.11.5-47.17,0-29.24-.96-45.29-11.96-46.96-42.68-.84-15.46-.44-31.86.03-47.34.38-12.29,0-23.8,7.41-34.36C17.28,3.65,30.89,1.06,46.19.45ZM47.57,13.24c-18.92.68-31.83,4.71-33.99,25.99-1.25,12.36-.4,25.94-.33,38.34.13,24.03-3.35,48.58,28.03,50.63,18.13,1.18,41.02,1.14,59.17,0,26.63-1.67,27.09-18.96,27.69-40.61.39-14.2.69-28.64.03-42.85-1.17-25.31-11.94-30.85-35.61-31.62-14.47-.47-30.51-.41-44.98.12Z"
+                            />
+                            <path
+                                class="cls-1"
+                                d="M67.87,34.66c28.4-2.19,48.38,28.13,34.65,53.46s-50.16,25.27-63.66,0c-12.38-23.17,3.01-51.46,29.01-53.46ZM54.3,54.03c-22.1,21.56,10.79,55.19,32.75,33.76,22.13-21.59-10.53-55.44-32.75-33.76Z"
+                            />
+                            <path
+                                class="cls-1"
+                                d="M107.78,24.62c11.25-.61,12.17,17.09.55,17.16-10.92.06-11.18-16.59-.55-17.16Z"
+                            /></svg
+                        >Instagram</a
+                    >
+                </div>
+            </div>
+
+            <div class="copy">
+                &copy; 2025 BLAZE_BASKETBALL_SCHOOL. All rights reserved.
+            </div>
+        </footer>
     </body>
 </html>
