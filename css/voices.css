@@ -138,9 +138,9 @@ button:hover {
     background-color: whitesmoke;
     padding: 5rem 0 15rem;
 }
-.voice-title {
+.section-header {
     text-align: center;
-    margin: 2rem auto 5rem;
+    margin: 5rem auto 5rem;
     font-weight: bold;
 }
 .heading-text {

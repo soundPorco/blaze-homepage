@@ -6,44 +6,6 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 
-const slides = document.querySelectorAll(".slide");
-let current = 0;
-
-function showNextSlide() {
-    slides[current].classList.remove("active");
-    current = (current + 1) % slides.length;
-    slides[current].classList.add("active");
-}
-
-// slides[current].classList.add("active");
-// 最初のスライド表示
-// setInterval(showNextSlide, 5000);
-// 5秒ごとに切り替え
-
-// Swiperのjs
-const swiper = new Swiper(".swiper", {
-    slidesPerView: 3, // 例: 一度に3枚のスライドを表示
-    spaceBetween: 20, // 例: スライド間の余白を20pxに設定
-    // ページネーションが必要なら追加
-    pagination: {
-        el: ".swiper-pagination",
-        // type: "progressbar",
-    },
-    // 最後まで行くと最初の画像に戻ります
-    loop: true,
-    speed: 1500,
-    // 自動スライドです
-    autoplay: {
-        delay: 3000, // 3秒ごとにスライド
-        disableOnInteraction: false, // ユーザー操作後も自動再開
-    },
-    // ナビボタンが必要なら追加
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-
 // クラス紹介アコーディオンタイプの実装コード
 document.querySelectorAll(".accordion-box").forEach((box) => {
     const accordionBtn = box.querySelector(".accordion-toggle");
