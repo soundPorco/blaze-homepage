@@ -57,9 +57,3 @@ function runTypingAnimation() {
         });
     });
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-    runTypingAnimation();
-    // 15秒ごとに繰り返す（必要に応じて時間調整）
-    setInterval(runTypingAnimation, 15000);
-});
