@@ -134,7 +134,7 @@ main {
     position: fixed;
     bottom: 8rem;
     right: 1rem;
-    padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     font-weight: bold;
     background-color: orange;
     color: white;
@@ -142,10 +142,6 @@ main {
     border-radius: 3rem;
     cursor: pointer;
     z-index: 1000; /* 最前面に */
-}
-.fixed-button a {
-    color: inherit; /* 親要素の文字色を継承 */
-    text-decoration: none; /* 下線を消す */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -153,14 +149,14 @@ main {
 .fixed-button div {
     text-align: center;
 }
-.fixed-button a h3 {
+.fixed-button h3 {
     font-weight: bold;
     font-size: 1.5rem;
     margin: 0;
     padding: 0;
     font-family: "Oswald";
 }
-.fixed-button a p {
+.fixed-button p {
     font-weight: bold;
     font-size: 0.8rem;
     margin: 0;

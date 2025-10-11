@@ -6,25 +6,59 @@
         <title>Document</title>
     </head>
     <body>
-        <img src="images/tokushima.png" alt="" class="image" />
-
-        <div class="title">タイトル</div>
-        <div class="text">テキストテキストテキストテキストテキスト</div>
-        <div class="title">タイトル</div>
-        <div class="text">テキストテキストテキストテキストテキスト</div>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">クラス</th>
+                    <th scope="col">月曜日</th>
+                    <th scope="col">火曜日</th>
+                    <th scope="col">水曜日</th>
+                    <th scope="col">木曜日</th>
+                    <th scope="col">金曜日</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>BASIC</th>
+                    <td>19:15~20:15</td>
+                    <td>18:15~19:45</td>
+                    <td>18:15~19:45</td>
+                    <td>✖️</td>
+                    <td>19:15~20:15</td>
+                </tr>
+                <tr>
+                    <th>ADVANCE</th>
+                    <td>✖️</td>
+                    <td>20:00~21:30</td>
+                    <td>20:00~21:30</td>
+                    <td>20:00~21:30</td>
+                    <td>✖️</td>
+                </tr>
+                <tr>
+                    <th>運動キッズクラス</th>
+                    <td>18:00~18:50</td>
+                    <td>✖️</td>
+                    <td>✖️</td>
+                    <td>✖️</td>
+                    <td>✖️</td>
+                </tr>
+            </tbody>
+        </table>
         <style>
-            .title {
-                font-size: 40px;
-                font-weight: 1000;
-                color: red;
+            table {
+                border-collapse: collapse;
+                width: 100%;
             }
-            .text {
-                font-size: 20px;
-                color: blue;
+
+            th,
+            td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: center;
             }
-            .image {
-                width: 300px;
-                height: auto;
+
+            th {
+                background-color: #f2f2f2;
             }
         </style>
     </body>
