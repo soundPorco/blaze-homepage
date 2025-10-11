@@ -606,7 +606,7 @@ main {
     align-items: center;
 }
 .accordion-box {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     max-width: 1000px;
 }
 .accordion-front {
@@ -624,6 +624,7 @@ main {
     width: clamp(200px, 45%, 500px);
     object-fit: cover;
     border-radius: 1rem;
+    filter: sepia(20%) brightness(85%);
 }
 .accordion-content {
     max-height: 0;
