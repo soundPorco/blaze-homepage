@@ -1033,6 +1033,12 @@ h4.option {
     }
     /* ナビバーについて終了 */
 
+    /* メインビジュアルについて */
+    .mv-logo {
+        width: 70vw;
+        height: auto;
+    }
+
     /* aboutセクションについて */
     .about-header,
     .about-sub-header {
