@@ -47,18 +47,61 @@
         <style>
             table {
                 border-collapse: collapse;
-                width: 100%;
+                width: clamp(900px, 90%, 1000px);
+                margin: 20px auto;
+                font-size: 1rem;
+                text-align: center;
+                border: 1px solid gray;
+            }
+
+            thead th {
+                background-color: black;
+                color: white;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            tbody tr {
+                border-bottom: 1px solid gray;
+            }
+
+            tbody tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+            tbody tr:hover {
+                background-color: #e6f2fa;
             }
 
             th,
             td {
-                border: 1px solid black;
-                padding: 8px;
-                text-align: center;
+                padding: 10px;
+                border-right: 1px solid gray; /* 縦線を追加 */
             }
 
-            th {
-                background-color: #f2f2f2;
+            th:last-child,
+            td:last-child {
+                border-right: none; /* 最後の列の縦線を削除 */
+            }
+
+            @media (max-width: 768px) {
+                table {
+                    display: block;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                }
+
+                thead {
+                    display: table;
+                    width: 100%;
+                    table-layout: fixed;
+                }
+
+                tbody {
+                    display: table;
+                    width: 100%;
+                    table-layout: fixed;
+                }
             }
         </style>
     </body>

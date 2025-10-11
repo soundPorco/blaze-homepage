@@ -756,11 +756,56 @@ h4.option {
     margin: 2rem auto;
     padding: 3rem 2rem;
 }
-.time-list {
-    list-style: none;
-    font-weight: bolder;
-    font-size: 1.6rem;
+
+/* テーブルのスタイル */
+.time-table-container {
+    overflow-x: auto;
+    /* 横スクロールを許可 */
+}
+.time-table {
+    border-collapse: collapse;
+    width: clamp(900px, 90%, 1000px);
+    margin: 20px auto;
+    font-size: 1rem;
     text-align: center;
+    border: 1px solid gray;
+}
+
+.time-table thead th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.time-table tbody tr {
+    border-bottom: 1px solid gray;
+}
+
+.time-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.time-table tbody tr:hover {
+    background-color: #e6f2fa;
+}
+
+.time-table th,
+.time-table td {
+    padding: 10px;
+    border-right: 1px solid gray; /* 縦線を追加 */
+}
+
+.time-table th:last-child,
+.time-table td:last-child {
+    border-right: none; /* 最後の列の縦線を削除 */
+}
+.scroll-notice {
+    font-size: 0.8rem;
+    color: gray;
+    text-align: center;
+    margin-top: 0.5rem;
+    display: none;
 }
 
 /* 月会費、諸費用について */
@@ -1155,6 +1200,15 @@ h4.option {
         font-size: 0.8rem;
         list-style: none;
     }
+    /* classセクションについて終了 */
+
+    /* time-tableセクションについて */
+    .scroll-notice {
+        display: block;
+    }
+    /* time-tableセクションについて終了 */
+
+    /* tuitionセクションについて */
 
     .tuition-flex {
         flex-direction: column;
