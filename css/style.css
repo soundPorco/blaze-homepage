@@ -164,46 +164,10 @@ main {
 }
 
 /* メインビジュアル */
-.bg-slideshow {
-    position: relative;
-    width: 100%;
-    height: 1000px;
-    overflow: hidden;
-}
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: 1000px;
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-    filter: brightness(60%);
-}
 
-.slide.active {
-    opacity: 1;
-}
 .mv-space {
     height: 1000px;
 }
-/*
-.mv-section {
-    height: 1000px;
-    width: 100%;
-    margin-top: 0px;
-    padding: 150px 60px;
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../images/img13.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: -1;
-    background-attachment: fixed;
-} */
 
 .mv-logo {
     position: absolute;
@@ -214,6 +178,22 @@ main {
     height: auto;
     object-fit: contain;
     z-index: 1;
+    animation: dropDown 2s ease-out forwards;
+    opacity: 0;
+}
+/* アニメーション定義 */
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translate(
+            -50%,
+            calc(-50% - 100px)
+        ); /* 中央基準 + 上に100pxずらす */
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%); /* 元の中央位置へ */
+    }
 }
 
 /* #typing-title,
@@ -330,7 +310,6 @@ main {
 /* container2について */
 .about-portrait2 {
     width: clamp(300px, 45%, 700px);
-    border-radius: 0 2rem 2rem 0;
 }
 .in-about-portrait2,
 .in-about-portrait3 {
@@ -340,7 +319,6 @@ main {
 /* container3について */
 .about-portrait3 {
     width: clamp(300px, 40%, 600px);
-    border-radius: 2rem 0 0 2rem;
 }
 .about-name3 {
     font-size: 1.5rem;
