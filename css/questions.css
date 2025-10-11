@@ -193,6 +193,11 @@ button:hover {
     width: clamp(300px, 90%, 1000px);
     margin: 0 auto;
 }
+.question-answer a {
+    display: block;
+    margin-top: 0.5rem;
+    color: blue;
+}
 
 /* footerのCSS */
 .footer-container {
