@@ -176,7 +176,7 @@ main {
     width: 100%;
     height: 100%;
     opacity: 0;
-    animation: img-change 24s infinite;
+    animation: img-change 32s infinite;
 }
 .mv-item:nth-child(1) {
     animation-delay: 0s;
@@ -186,6 +186,9 @@ main {
 }
 .mv-item:nth-child(3) {
     animation-delay: 16s;
+}
+.mv-item:nth-child(4) {
+    animation-delay: 24s;
 }
 
 .mv-item img {
@@ -244,52 +247,6 @@ main {
         transform: translate(-50%, -50%); /* 元の中央位置へ */
     }
 }
-
-/* #typing-title,
-#typing-sub,
-#typing-theme {
-    display: inline-block;
-    border-right: 2px solid #222;
-    animation: blink-cursor 0.8s steps(1) infinite;
-}
-
-@keyframes blink-cursor {
-    0%,
-    100% {
-        border-color: #222;
-    }
-    50% {
-        border-color: transparent;
-    }
-}
-.mv-text {
-    color: white;
-    display: flex;
-}
-.mv-title {
-    font-family: "Oswald", sans-serif;
-    color: white;
-    font-size: 4rem;
-    margin: 0;
-    padding: 0;
-}
-.mv-title span::first-letter {
-    font-size: 5rem;
-    color: rgb(0, 100, 170);
-}
-
-.mv-theme {
-    font-size: 1.8rem;
-}
-
-.vertical-text {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    letter-spacing: 0.2em;
-    line-height: 1.5;
-    white-space: pre-line;
-    margin-top: 16px;
-} */
 
 /* Aboutセクション */
 .about-section {
@@ -1023,8 +980,9 @@ h4.option {
     /*下線をなくす */
 }
 
-/* メディアクエリ：スマホ対応 */
-/* レスポンシブ対応 */
+/* ----------------------------
+メディアクエリ：スマホ対応
+------------------------------- */
 
 /* スマホ用 */
 @media (max-width: 768px) {
