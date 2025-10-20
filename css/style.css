@@ -541,24 +541,14 @@ main {
     border: none;
 }
 
-.custom-shape-divider-bottom-1758721647 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.class-introduction::before {
+    content: "";
     width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1758721647 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 90px;
-}
-
-.custom-shape-divider-bottom-1758721647 .shape-fill {
-    fill: #ffffff;
+    height: 80px;
+    background-color: rgb(0, 100, 170);
+    position: absolute;
+    top: -1px;
+    clip-path: polygon(50% 100%, 100% 0%, 0% 0%);
 }
 
 /* 三角について終了 */
