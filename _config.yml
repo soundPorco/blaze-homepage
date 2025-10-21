@@ -1,0 +1,6 @@
+title: "BLAZE Basketball School"
+description: "バスケットボールで『上』を目指す子どもたちへ"
+url: "https://blaze-basketball.com"
+plugins:
+    - jekyll-sitemap
+    - jekyll-feed
