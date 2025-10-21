@@ -541,16 +541,6 @@ main {
     border: none;
 }
 
-.class-introduction::before {
-    content: "";
-    width: 100%;
-    height: 80px;
-    background-color: rgb(0, 100, 170);
-    position: absolute;
-    top: -1px;
-    clip-path: polygon(50% 100%, 100% 0%, 0% 0%);
-}
-
 /* 三角について終了 */
 
 /* classのセクションヘッダー部分 */
