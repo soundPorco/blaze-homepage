@@ -6,6 +6,13 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
 
+const navButtons = document.querySelectorAll(".nav-btn");
+navButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+    });
+});
+
 // クラス紹介アコーディオンタイプの実装コード
 document.querySelectorAll(".accordion-box").forEach((box) => {
     const accordionBtn = box.querySelector(".accordion-toggle");
