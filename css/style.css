@@ -31,12 +31,12 @@ button:hover {
 }
 .curved-bottom {
     position: relative;
-    border-bottom-left-radius: 50% 40px;
-    border-bottom-right-radius: 50% 40px;
+    border-bottom-left-radius: 50% 15px;
+    border-bottom-right-radius: 50% 15px;
 }
 /* aタグで飛ぶ際の位置調整用 */
 .space {
-    height: 130px;
+    height: 100px;
     visibility: hidden;
 }
 /* h3タグ */
@@ -82,7 +82,7 @@ main {
     background-color: black;
 }
 .mvSpace {
-    height: 5rem; /* ナビバーの高さに合わせる */
+    height: 5.5rem; /* ナビバーの高さに合わせる */
 }
 .navbar-logo {
     height: 3.5rem;
@@ -195,7 +195,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(40%);
+    filter: brightness(30%);
 }
 
 @keyframes img-change {
@@ -248,30 +248,54 @@ main {
     }
 }
 
+.catchphrase {
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(8rem, 18vw, 9rem);
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    line-height: 1;
+}
+
 /* Aboutセクション */
 .about-section {
-    background-color: whitesmoke;
-    padding: 2rem 0;
+    background-color: black;
+    color: white;
+    padding: 0 0 3rem 0;
     z-index: 2;
     margin-bottom: -200px;
 }
 /* aboutのセクションヘッダー部分 */
 .about-headers {
-    margin: 0 3rem;
-    text-align: left;
+    margin: 0;
+    text-align: center;
+    background-color: #fff;
+    color: black;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 0rem; /* ノッチ分のスペースを確保 */
+}
+.about-headers::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4rem; /* ノッチの高さ */
+    height: 4rem; /* ノッチの高さ（調整可） */
+    background: #fff; /* ノッチの色（見出しの背景色に合わせる） */
+    clip-path: polygon(50% 100%, 0 0, 100% 0); /* 下向き三角 */
+    pointer-events: none;
+    /* ▼ 1px分だけ上に食い込ませる */
+    margin-bottom: 1px;
 }
 .about-header {
-    color: rgb(0, 100, 170);
     font-family: "Oswald", sans-serif;
-    font-size: 2.5rem;
-    text-align: left;
+    font-size: 4rem;
 }
 .about-sub-header {
-    color: rgb(0, 100, 170);
     font-weight: bold;
-    font-size: 1rem;
-    text-align: left;
+    font-size: 1.2rem;
 }
+
 /* aboutの共通設定 */
 .about-section img {
     object-fit: cover;
@@ -281,21 +305,23 @@ main {
     padding: 2rem 3%;
     width: clamp(400px, 70%, 900px);
     text-align: left;
-    border-bottom: rgb(0, 100, 170) 1px solid;
+    border-bottom: white 1px solid;
 }
 .about-caption {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 0.2rem 0 1rem;
     text-align: left;
     white-space: nowrap;
 }
 .about-role {
-    color: gray;
+    color: rgb(185, 185, 185);
     font-size: 1.2rem;
+    font-weight: bold;
     text-align: left;
 }
 .about-description {
     line-height: 1.7;
+    text-align: left;
 }
 
 /* container1について */
@@ -316,6 +342,8 @@ main {
 /* container2について */
 .about-portrait2 {
     width: clamp(300px, 45%, 700px);
+    border-radius: 0 0.5rem 0.5rem 0;
+    filter: sepia(30%) brightness(85%);
 }
 .in-about-portrait2,
 .in-about-portrait3 {
@@ -325,14 +353,19 @@ main {
 /* container3について */
 .about-portrait3 {
     width: clamp(300px, 40%, 600px);
+    border-radius: 0.5rem 0 0 0.5rem;
+    filter: sepia(20%) brightness(85%);
 }
 .about-name3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
     margin: 0.2rem 0 1rem 0;
 }
 
 /* container4について */
+.about-container4 {
+    padding: 5rem 0 5rem;
+}
 .about-text4 {
     display: flex;
     flex-direction: column;
@@ -346,17 +379,17 @@ main {
     background: rgb(0, 100, 170);
     position: relative;
     z-index: 3;
-    padding: 2rem 0 5rem;
+    padding: 5rem 0 12rem;
 }
 .about-message {
     font-size: 1.5rem;
-    margin: 0.2rem 0 1rem;
+    margin: 0.2rem 0 2.5rem;
     text-align: left;
     white-space: nowrap;
 }
 .about-caption5 {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin: 0.5rem auto;
     text-align: center;
@@ -364,12 +397,13 @@ main {
 }
 .about-caption5 strong {
     color: gold;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin: 0 0.1rem;
 }
 .about-instagram {
     display: inline-block;
     padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
     background-color: white;
     color: rgb(0, 100, 170);
     font-weight: bold;
@@ -381,6 +415,21 @@ main {
     filter: brightness(120%);
     transition: 0.3s;
 }
+.insta-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.insta-flex iframe {
+    width: 30rem;
+    aspect-ratio: 1/1.9;
+    border: none;
+    border-radius: 12px; /* 角丸でおしゃれに */
+}
+
 .sp-only {
     display: none;
 }
@@ -406,7 +455,7 @@ main {
 .labo-sub-header {
     color: red;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -679,28 +728,30 @@ h4.option {
 
 /* .time&tuition-sectionについて  */
 .time-tuition-section {
-    background-image: url("../images/logo-back-img.png");
-    background-size: cover;
+    /* background-image: url("../images/logo-back-img.png");
+    background-size: cover; */
     background-color: black;
     color: black;
 }
 .tuition-header,
 .time-header {
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-family: "Oswald", sans-serif;
     text-align: center;
     margin-top: 2rem;
+    color: white;
 }
 .time-sub-header,
 .tuition-sub-header {
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: center;
     margin-bottom: 3rem;
     letter-spacing: 0.2rem;
     color: red;
 }
+
 .time-tuition-section strong {
     color: red;
     font-size: 1.3rem;
@@ -791,7 +842,8 @@ h4.option {
     margin-left: 30%;
 }
 .tuition-list {
-    list-style: number;
+    /* 正しい番号付きリスト表現に変更 */
+    list-style-type: decimal;
     line-height: 1.8;
     text-align: left;
 }
@@ -802,32 +854,102 @@ h4.option {
     margin-left: 20%;
     margin-top: 1rem;
 }
-
+/* time&tuitionセクション終了 */
 /* その他のセクション */
-.other-section {
-    background-color: whitesmoke;
-    padding: 8rem 5rem 15rem;
-    color: black;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 5rem;
+.others-section {
+    background-color: black;
+    color: white;
 }
+.others-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    padding: 5rem 2rem 5rem;
+    margin: 0 auto;
+}
+.other-item {
+    background-color: #444;
+    border-radius: 1rem;
+    width: clamp(150px, 30%, 500px);
+    text-align: left;
+    font-size: 1rem;
+    aspect-ratio: 1/0.9;
+    position: relative;
+}
+.other-item a {
+    color: inherit;
+    /* 親要素と同じ色にする（または任意の色に変更） */
+    text-decoration: none;
+    /*下線をなくす */
+}
+.other-item-text {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+.other-item-title {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Oswald";
+}
+.other-item-img1,
+.other-item-img2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    filter: brightness(50%) sepia(20%);
+}
+.other-item-img3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    filter: grayscale(100%) brightness(70%);
+}
+.other-item:hover {
+    filter: brightness(130%) sepia(10%);
+    transition: all 0.3s ease;
+}
+.other-coming-soon {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* その他のセクションについて終了 */
+
+/* ニュースのセクション */
+.news-section {
+    background-color: #444;
+    padding: 8rem 5rem 15rem;
+    color: white;
+}
+/* .news-main {
+    margin: 0 auto;
+    text-align: center;
+} */
 
 /* newsについて */
 .news-headers {
-    text-align: left;
-    margin-bottom: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 .news-header {
     font-family: "Oswald", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 .news-sub-header {
-    color: rgb(0, 100, 170);
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.2rem;
 }
 .news-wrapper {
@@ -835,11 +957,11 @@ h4.option {
 }
 .news-date {
     font-size: 0.8rem;
-    color: gray;
+    color: lightgray;
+    font-weight: bold;
     margin-bottom: 0.2rem;
 }
 .news-title {
-    color: black;
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -850,36 +972,27 @@ h4.option {
     font-size: 0.9rem;
     line-height: 1.2;
 }
-/* newsについて終了 */
-.left-side {
-    width: clamp(150px, 25%, 300px);
-}
 
-.others-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0 0.5rem;
-}
-.others {
-    /* border: #ccc 1.5px solid; */
-    background-color: #444;
-    padding: 0.8rem 1rem;
-    border-radius: 3rem;
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: white;
+.news-html-link {
+    display: block;
+    padding: 0.5rem 2rem;
+    margin: 1rem auto 0;
     text-align: center;
-    white-space: nowrap;
-}
-.others:hover {
-    background-color: rgb(0, 100, 170);
+    width: fit-content;
+    background-color: #333;
     color: white;
+    font-size: 1rem;
+    border-radius: 3rem;
+    border: 1px solid white;
+    text-decoration: none;
+}
+.news-html-link:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
     transition: all 0.3s ease;
 }
-
-/* その他のセクション終了 */
+/* newsについて終了 */
 
 /* footerのCSS */
 .footer-container {
@@ -1049,6 +1162,7 @@ h4.option {
         border-radius: 2rem;
         margin-bottom: 2rem;
         object-fit: cover;
+        filter: sepia(30%) brightness(85%);
     }
     .in-about-portrait3 {
         display: block;
@@ -1057,6 +1171,7 @@ h4.option {
         border-radius: 2rem;
         margin-bottom: 2rem;
         object-fit: cover;
+        filter: sepia(20%) brightness(85%);
     }
     .about-text {
         display: flex;
@@ -1079,21 +1194,7 @@ h4.option {
     .sp-only {
         display: block;
     }
-    /* ーーーーーーーーーー
-    swiperについて
-    ーーーーーーーーー */
-    .about-swiper-container {
-        margin: 3rem auto 0;
-        width: 90vw;
-    }
-    /* .swiper {
-
-    } */
-    .swiper-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    /* aboutセクションについて終了 */
 
     /* ラボ紹介セクションについて */
     /* gridの組み替え部分 */
@@ -1205,32 +1306,19 @@ h4.option {
         margin-left: 0;
     }
 
-    /* otherセクションについて */
-    .other-section {
-        flex-direction: column;
-        justify-content: baseline;
+    /* ニュースセクションについて */
+    .news-section {
         padding: 5rem 2rem 15rem;
-        gap: 1rem;
-    }
-    .left-side {
-        width: 90vw;
-    }
-    .news-headers {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    .news-header {
-        margin: 0 auto;
-    }
-    .news-sub-header {
-        margin: 0 auto 1rem;
     }
 
     .others-container {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2px;
+    }
+    .other-item {
+        width: 70vw;
+        aspect-ratio: 1/0.7;
     }
 
     /* フッターについて */
