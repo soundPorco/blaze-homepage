@@ -826,7 +826,7 @@ h4.option {
 
 /* 月会費、諸費用について */
 .tuition-container {
-    padding: 5rem 0 15rem;
+    padding: 3rem 0 0rem;
 }
 .tuition-flex {
     display: flex;
