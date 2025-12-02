@@ -423,9 +423,9 @@ main {
     padding: 2rem;
 }
 
-.insta-flex iframe {
+.insta-flex .instagram-media {
     width: 30rem;
-    aspect-ratio: 1/1.9;
+    aspect-ratio: 1/1.5;
     border: none;
     border-radius: 12px; /* 角丸でおしゃれに */
 }
