@@ -1228,6 +1228,7 @@ h4.option {
     }
     .map-description {
         text-align: left;
+        padding: 0 1rem;
     }
     /* gridの組み替え部分終了 */
 
