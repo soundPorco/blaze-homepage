@@ -683,6 +683,15 @@ main {
     margin: 0;
     padding: 0;
 }
+.accordion-subtitle {
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: "Oswald";
+    margin: 0 0 -1rem 0;
+    padding: 0;
+    letter-spacing: 0.7rem;
+    color: black;
+}
 .accordion-title.option {
     color: royalblue;
     font-size: 2.5rem;
@@ -693,7 +702,7 @@ h4.option {
     font-family: "Oswald";
     line-height: 0.3;
 }
-.accordion-header p {
+.accordion-title-text {
     color: red;
 }
 .accordion-box button {
