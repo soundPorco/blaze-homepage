@@ -879,11 +879,18 @@ h4.option {
 .tuition-details {
     margin-left: 30%;
 }
+.tuition-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
 .tuition-list {
     /* 正しい番号付きリスト表現に変更 */
-    list-style-type: decimal;
+    /* list-style-type: decimal; */
+    margin-left: 1rem;
     line-height: 1.8;
     text-align: left;
+    margin-bottom: 1rem;
 }
 .attention {
     font-size: 0.8rem;
@@ -893,6 +900,7 @@ h4.option {
     margin-top: 1rem;
 }
 /* time&tuitionセクション終了 */
+
 /* その他のセクション */
 .others-section {
     background-color: black;
