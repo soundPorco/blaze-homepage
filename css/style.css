@@ -735,6 +735,13 @@ h4.option {
     margin-bottom: 0.5rem;
 }
 
+.accordion-list {
+    list-style: none;
+    text-align: left;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
 /* 今後開設予定のクラスについて */
 .upcoming {
     text-align: center;
