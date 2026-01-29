@@ -692,6 +692,9 @@ main {
     letter-spacing: 0.7rem;
     color: black;
 }
+.accordion-subheading {
+    margin-top: 1.5rem;
+}
 .accordion-title.option {
     color: royalblue;
     font-size: 2.5rem;
