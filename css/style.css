@@ -374,6 +374,21 @@ main {
     padding: 3% 5%;
     width: clamp(0, 60%, 900px);
 }
+.join-button-about {
+    background-color: #333;
+    color: white;
+    border: white 1px solid;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    font-weight: bold;
+    font-size: larger;
+}
+.join-button-about:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
 /* container5について */
 .about-container5 {
     background: rgb(0, 100, 170);
@@ -543,6 +558,13 @@ main {
     grid-column: 1/2;
     grid-row: 3/4;
 }
+.join-button-place {
+    grid-column: 1/3;
+    grid-row: 7/8;
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+}
 
 /* マップのやつ */
 .map {
@@ -562,7 +584,7 @@ main {
 }
 .map-description {
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
     width: clamp(300px, 80%, 800px);
     margin-left: auto;
     margin-right: auto;
@@ -654,12 +676,29 @@ main {
     text-align: left;
     line-height: 1.7;
 }
+.accordion-title-wrapper {
+    display: inline-block; /* タイトル幅を基準にする */
+    text-align: left;
+}
 .accordion-title {
     font-size: 3rem;
     font-weight: bolder;
     font-family: "Oswald";
     margin: 0;
     padding: 0;
+}
+.accordion-subtitle {
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: "Oswald";
+    margin: 0 0 -1rem 0;
+    padding: 0;
+    letter-spacing: 0.7rem;
+    color: black;
+    text-align: center;
+}
+.accordion-subheading {
+    margin-top: 1.5rem;
 }
 .accordion-title.option {
     color: royalblue;
@@ -671,7 +710,7 @@ h4.option {
     font-family: "Oswald";
     line-height: 0.3;
 }
-.accordion-header p {
+.accordion-title-text {
     color: red;
 }
 .accordion-box button {
@@ -704,6 +743,25 @@ h4.option {
     margin-bottom: 0.5rem;
 }
 
+.accordion-list {
+    list-style: none;
+    text-align: left;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+.accordion-attention {
+    font-size: 0.8rem;
+    color: red;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.accordion-attention a {
+    color: red;
+    text-decoration: underline;
+}
+.accordion-class-overview {
+    margin-bottom: 1.5rem;
+}
 /* 今後開設予定のクラスについて */
 .upcoming {
     text-align: center;
@@ -841,20 +899,39 @@ h4.option {
 .tuition-details {
     margin-left: 30%;
 }
+.tuition-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.tuition-list-head {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+}
 .tuition-list {
-    /* 正しい番号付きリスト表現に変更 */
-    list-style-type: decimal;
+    margin-left: 1rem;
     line-height: 1.8;
     text-align: left;
+    margin-bottom: 1rem;
+}
+.tuition-note {
+    font-size: 0.8rem;
+    color: red;
+    line-height: 1.3;
+    font-weight: bold;
 }
 .attention {
     font-size: 0.8rem;
     color: red;
     font-weight: 800;
-    margin-left: 20%;
+    line-height: 1.3;
+    margin-left: clamp(10%, 3rem, 20%);
     margin-top: 1rem;
 }
+
 /* time&tuitionセクション終了 */
+
 /* その他のセクション */
 .others-section {
     background-color: black;
