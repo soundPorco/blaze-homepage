@@ -604,6 +604,8 @@ main {
 .partner-section {
     background-color: white;
     padding: 0 0 8rem;
+    margin: -3rem 0;
+    z-index: 1;
 }
 
 /* パートナー企業・団体のご紹介のセクションヘッダー部分 */
@@ -640,7 +642,7 @@ main {
     object-fit: contain;
 }
 .partner-name {
-    font-size: 1.2rem;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 /* クラス紹介 */
@@ -648,6 +650,7 @@ main {
 .class-section {
     background-color: white;
     padding: 0 0 8rem;
+    z-index: 2;
 }
 /* クラス冒頭の三角について */
 .class-introduction {
@@ -665,6 +668,7 @@ main {
     font-family: "Oswald", sans-serif;
     font-size: 3rem;
     text-align: center;
+    margin-top: 2rem;
 }
 .class-sub-header {
     color: gold;
