@@ -597,11 +597,60 @@ main {
     border-radius: 1rem;
 }
 
+/* -------------------------
+パートナー企業・団体のご紹介
+------------------------- */
+
+.partner-section {
+    background-color: white;
+    padding: 0 0 8rem;
+    margin: -3rem 0;
+    z-index: 1;
+}
+
+/* パートナー企業・団体のご紹介のセクションヘッダー部分 */
+.partner-header {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+.partner-sub-header {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.partner-title {
+    background-color: #ccc;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 100;
+    width: clamp(300px, 80%, 1000px);
+    margin: 5rem auto 2rem;
+}
+.partner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.partner-logo {
+    width: clamp(300px, 70%, 1000px);
+    object-fit: contain;
+}
+.partner-name {
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
 /* クラス紹介 */
 
 .class-section {
     background-color: white;
     padding: 0 0 8rem;
+    z-index: 2;
 }
 /* クラス冒頭の三角について */
 .class-introduction {
@@ -619,6 +668,7 @@ main {
     font-family: "Oswald", sans-serif;
     font-size: 3rem;
     text-align: center;
+    margin-top: 2rem;
 }
 .class-sub-header {
     color: gold;
