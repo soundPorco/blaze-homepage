@@ -27,3 +27,4 @@ document.querySelectorAll(".accordion-box").forEach((box) => {
     });
     console.log("hello");
 });
+const lightbox = GLightbox();
