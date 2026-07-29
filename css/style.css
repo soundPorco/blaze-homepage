@@ -545,6 +545,12 @@ main {
     border: none;
     border-radius: 1rem;
 }
+/* glightboxのスタイル、画像を囲むaタグがimgと同じサイズになりクリックしやすい */
+.glightbox {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 /* gridの組み替え部分 */
 .labo-main-img {
     grid-column: 1/2;
