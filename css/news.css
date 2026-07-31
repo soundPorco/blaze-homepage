@@ -48,6 +48,9 @@ button:hover {
     color: white;
     background-color: black;
 }
+.mvSpace {
+    height: 5rem; /* ナビバーの高さに合わせる */
+}
 .navbar-logo {
     height: 3.5rem;
     width: auto;
@@ -128,6 +131,28 @@ button:hover {
     font-size: 0.8rem;
     margin: 0;
     padding: 0;
+}
+
+/* ---------------
+ニュースについて
+-------------- */
+.news-section {
+    background-color: whitesmoke;
+    padding: 5rem 0 15rem;
+}
+/* セクションヘッダー */
+.section-header {
+    text-align: center;
+    margin: 5rem auto 5rem;
+    font-weight: bold;
+}
+.heading-text {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
+}
+.sub-heading-text {
+    font-size: 1rem;
+    color: rgb(0, 100, 170);
 }
 /* footerのCSS */
 .footer-container {
