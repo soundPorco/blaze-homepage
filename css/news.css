@@ -154,6 +154,32 @@ button:hover {
     font-size: 1rem;
     color: rgb(0, 100, 170);
 }
+/* ニュースコンテンツ */
+.news-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.news-container .news-wrapper {
+    background-color: white;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: clamp(300px, 80%, 800px);
+}
+.news-container .news-date {
+    font-size: 0.8rem;
+    color: gray;
+    margin-bottom: 0.5rem;
+}
+.news-container .news-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.news-container .news-text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
 /* footerのCSS */
 .footer-container {
     padding: 3rem 5rem 2rem;
