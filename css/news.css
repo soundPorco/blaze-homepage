@@ -159,24 +159,34 @@ button:hover {
     max-width: 800px;
     margin: 0 auto;
 }
-.news-container .news-wrapper {
+.news-wrapper {
     background-color: white;
     border-radius: 1rem;
     margin: 1rem auto;
     padding: 1rem;
     width: clamp(300px, 80%, 800px);
 }
-.news-container .news-date {
+.news-tag {
+    display: inline-block;
+    background-color: rgb(0, 100, 170);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+.news-date {
+    display: inline-block;
     font-size: 0.8rem;
     color: gray;
     margin-bottom: 0.5rem;
 }
-.news-container .news-title {
+.news-title {
     font-weight: bold;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
-.news-container .news-text {
+.news-text {
     font-size: 1rem;
     line-height: 1.5;
 }
