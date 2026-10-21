@@ -739,7 +739,7 @@ main {
 }
 .accordion-title-wrapper {
     display: inline-block; /* タイトル幅を基準にする */
-    text-align: left;
+    text-align: left; /* タイトルを中央寄せ */
 }
 .accordion-title {
     font-size: 3rem;
