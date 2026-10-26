@@ -737,22 +737,20 @@ main {
     text-align: left;
     line-height: 1.7;
 }
-.accordion-title-wrapper {
-    display: inline-block; /* タイトル幅を基準にする */
-    text-align: left; /* タイトルを中央寄せ */
-}
+
 .accordion-title {
     font-size: 3rem;
     font-weight: bolder;
     font-family: "Oswald";
     margin: 0;
     padding: 0;
+    text-align: left;
 }
 .accordion-subtitle {
     font-size: 0.8rem;
     font-weight: bold;
     font-family: "Oswald";
-    margin: 0 0 -1rem 0;
+    margin-bottom: 0.2rem;
     padding: 0;
     letter-spacing: 0.7rem;
     color: black;
@@ -760,16 +758,6 @@ main {
 }
 .accordion-subheading {
     margin-top: 1.5rem;
-}
-.accordion-title.option {
-    color: royalblue;
-    font-size: 2.5rem;
-}
-h4.option {
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: "Oswald";
-    line-height: 0.3;
 }
 .accordion-title-text {
     color: red;
