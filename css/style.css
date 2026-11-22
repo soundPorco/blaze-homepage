@@ -261,7 +261,7 @@ main {
 ーーーーーーーーーーーーーーーーーーーー */
 .first-news-section {
     background-color: black;
-    padding: 5rem;
+    padding: clamp(2rem, 5vw, 5rem);
     color: white;
 }
 
