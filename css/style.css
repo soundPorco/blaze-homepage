@@ -12,8 +12,8 @@ html {
 }
 body {
     font-family: sans-serif;
-    color: black;
-    background-color: black;
+    color: #111;
+    background-color: #111;
     overflow-x: hidden;
 }
 
@@ -260,7 +260,7 @@ main {
 冒頭のNEWSセクション
 ーーーーーーーーーーーーーーーーーーーー */
 .first-news-section {
-    background-color: black;
+    background-color: #111;
     padding: clamp(2rem, 5vw, 5rem);
     color: white;
 }
@@ -302,7 +302,7 @@ main {
 
 /* Aboutセクション */
 .about-section {
-    background-color: black;
+    background-color: #111;
     color: white;
     padding: 0 0 3rem 0;
     z-index: 2;
@@ -417,7 +417,7 @@ main {
 }
 .join-button-about:hover {
     background-color: white;
-    color: black;
+    color: #111;
     transition: 0.3s;
 }
 /* container5について */
@@ -482,7 +482,7 @@ main {
 
 /* 施設紹介ページ */
 .labo-section {
-    background-color: black;
+    background-color: #111;
     padding: 2rem 0;
     color: white;
     padding: 12rem 0;
@@ -507,7 +507,7 @@ main {
 
 /* outlineのセクションヘッダー部分 */
 .outline-header {
-    color: black;
+    color: #111;
     font-family: "Oswald", sans-serif;
     font-size: 3rem;
     text-align: center;
@@ -530,7 +530,7 @@ main {
     border-radius: 1rem;
     padding: 1rem 2rem;
     background-color: whitesmoke;
-    color: black;
+    color: #111;
     position: relative;
 }
 .labo-text ul {
@@ -616,7 +616,7 @@ main {
     border-radius: 1rem;
     padding: 1.5rem;
     background-color: whitesmoke;
-    color: black;
+    color: #111;
 }
 .map-title {
     font-size: 2.5rem;
@@ -657,7 +657,7 @@ main {
     text-align: center;
 }
 .partner-sub-header {
-    color: black;
+    color: #111;
     font-weight: bold;
     font-size: 1.2rem;
     text-align: center;
@@ -690,14 +690,14 @@ main {
 /* クラス紹介 */
 
 .class-section {
-    background-color: white;
+    background-color: #f2f2f2;
     padding: 0 0 8rem;
     z-index: 2;
 }
 /* クラス冒頭の三角について */
 .class-introduction {
     background-color: rgb(0, 100, 170);
-    color: white;
+    color: #f2f2f2;
     padding-bottom: 120px;
     position: relative;
     border: none;
@@ -784,7 +784,7 @@ main {
     margin-bottom: 0.2rem;
     padding: 0;
     letter-spacing: 0.7rem;
-    color: black;
+    color: #111;
     text-align: center;
 }
 .accordion-subheading {
@@ -868,8 +868,8 @@ main {
 .time-tuition-section {
     /* background-image: url("../images/logo-back-img.png");
     background-size: cover; */
-    background-color: black;
-    color: black;
+    background-color: #111;
+    color: #111;
 }
 .tuition-header,
 .time-header {
@@ -926,7 +926,7 @@ main {
 }
 
 .time-table thead th {
-    background-color: black;
+    background-color: #111;
     color: white;
     font-weight: bold;
     padding: 10px;
@@ -1014,7 +1014,7 @@ main {
 
 /* その他のセクション */
 .others-section {
-    background-color: black;
+    background-color: #111;
     color: white;
 }
 .others-container {
@@ -1145,7 +1145,7 @@ main {
 }
 .news-html-link:hover {
     background-color: white;
-    color: black;
+    color: #111;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -1237,7 +1237,7 @@ main {
     font-size: 0.8rem;
     color: white;
     margin: 1.5rem 0;
-    background-color: black;
+    background-color: #111;
 }
 .copy a {
     color: inherit;
@@ -1281,7 +1281,7 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        background: black;
+        background: #111;
         display: flex;
         flex-direction: column;
         align-items: center;
