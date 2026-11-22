@@ -256,6 +256,50 @@ main {
     line-height: 1;
 }
 
+/* ーーーーーーーーーーーーーーーーーーーー
+冒頭のNEWSセクション
+ーーーーーーーーーーーーーーーーーーーー */
+.first-news-section {
+    background-color: black;
+    padding: clamp(2rem, 5vw, 5rem);
+    color: white;
+}
+
+/* NEWSセクションのヘッダー */
+.first-news-headers {
+    border-left: #ccc 3px solid;
+    padding-left: 1rem;
+}
+.first-news-header {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.first-news-sub-header {
+    font-weight: bold;
+    margin: 0 0 0 0.5rem;
+    color: #cccccc;
+}
+.first-news-pick-up-label {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #555;
+    margin: 0.5rem 0 0.5rem 0;
+    background-color: #dddddd;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.3rem;
+    width: fit-content;
+}
+
+/* ピックアップニュース */
+.first-news-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
 /* Aboutセクション */
 .about-section {
     background-color: black;
