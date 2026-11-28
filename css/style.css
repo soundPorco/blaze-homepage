@@ -7,7 +7,7 @@
 html {
     scroll-behavior: smooth; /* スムーズスクロール */
     overflow-x: hidden;
-    font-size: clamp(14px, 1.5vw, 18px);
+    font-size: clamp(12px, 1.2vw, 16px);
     /* 素晴らしい記述方法、消すなよ */
 }
 body {
@@ -129,6 +129,7 @@ main {
 
 /* ナビバー終了 */
 
+/* コメントアウト済み */
 /* 参加ボタン */
 .fixed-button {
     position: fixed;
@@ -304,7 +305,7 @@ main {
 .about-section {
     background-color: #111;
     color: white;
-    padding: 0 0 3rem 0;
+    padding: 0 2rem 3rem 2rem;
     z-index: 2;
     margin-bottom: -200px;
 }
@@ -334,7 +335,8 @@ main {
 .about-text {
     margin: 0 auto;
     padding: 2rem 3%;
-    width: clamp(400px, 70%, 900px);
+    /* font-size: small; */
+    width: clamp(300px, 60%, 800px);
     text-align: left;
     border-bottom: white 1px solid;
 }
@@ -367,7 +369,7 @@ main {
 }
 
 .about-portrait1 {
-    width: clamp(300px, 40%, 800px);
+    width: clamp(200px, 35%, 700px);
     object-position: bottom;
 }
 /* container2について */
